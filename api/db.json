@@ -34,7 +34,8 @@
         {
             "id": 1,
             "userId": 1,
-            "task": "Take out garbage"
+            "task": "Take out garbage",
+            "dueDate": "02/15/2019"
         }
     ],
     "events":[
