@@ -8,6 +8,11 @@ const api = {
         return fetch(`http://localhost:8088/tasks?userId=${userId}&complete=false`)
             .then(r => r.json())
     },
+    //get single task
+    single: (taskId) => {
+        return fetch(`http://localhost:8088/tasks/${taskId}`)
+            .then(r => r.json())
+    },
     //POST new task
     new: (taskObject) => {
         return fetch("http://localhost:8088/tasks", {

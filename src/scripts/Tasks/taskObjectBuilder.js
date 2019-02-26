@@ -16,7 +16,7 @@ const object = {
     return {
       "complete": true
     }
-  }
+  },
 }
 
 export default object

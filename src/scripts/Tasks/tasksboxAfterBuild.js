@@ -8,6 +8,7 @@ const afterBuild = (userId) => {
     print.button(userId); //print the new task button
     listen.activateNewTask(userId); //activated the listener on the New Task button
     listen.checkBoxes(); //activates the listener on the check boxes
+    listen.loadEdit() //loads event listener on the task names
 }
 
 export default afterBuild

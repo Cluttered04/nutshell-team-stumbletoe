@@ -16,8 +16,8 @@ const print = {
     document.querySelector("#tasks-box").innerHTML = form.newTaskForm();
   },
   //print edit form
-  editForm: () => {
-    document.querySelector("#tasks-box").innerHTML = form.editForm();
+  editForm: (taskObject) => {
+    document.querySelector("#tasks-box").innerHTML = form.editTaskForm(taskObject);
   },
   saveButton: (userId) => {
     document.querySelector("#tasks-foot").innerHTML = form.saveButton(userId) + form.cancelButton();
@@ -25,7 +25,7 @@ const print = {
   taskbox: () => {
     document.querySelector("#tasks-cont").innerHTML = `<div id="tasks-head">TASKS</div>
       <div id="tasks-box"></div><div id="tasks-foot"></div>`
-  }
+  },
 };
 
 export default print;
