@@ -21,7 +21,7 @@ const printsEventsToDOM = {
         eventApiManager.fetchAllEventsFunction(userId)
         .then(parsedEvents => {
             parsedEvents.forEach(event => {
-            const fixedEventDate = moment(event.date)
+            const fixedEventDate = moment(event.date).format("MMM DD YYYY")
             document.querySelector("#events-body").innerHTML += buildSingleComponent(event.name, fixedEventDate, event.location, event.id)
         })
 

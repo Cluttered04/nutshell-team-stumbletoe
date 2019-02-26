@@ -21,10 +21,12 @@ const eventEventListeners = {
                 const eventName = document.querySelector("#event-name").value;
                 const eventDate = document.querySelector("#event-date").value;
                 const eventLocation = document.querySelector("#event-location").value;
+                const activeUser = sessionStorage.getItem("activeUser")
                 const eventObject = {
                     "name": eventName,
                     "date": eventDate,
-                    "location": eventLocation
+                    "location": eventLocation,
+                    "userId": activeUser
                 }
                 document.querySelector("#events-form").innerHTML = "";
                 eventApiManager.addNewEventFunction(eventObject)
@@ -65,11 +67,14 @@ const eventEventListeners = {
                 const eventDate =   document.querySelector("#edit-event-date").value;
                 const eventLocation = document.querySelector("#edit-event-location").value;
                 const eventId = event.target.id.split("-")[4];
+                const activeUser = sessionStorage.getItem("activeUser")
                 const eventObject = {
                     "name": eventName,
                     "date": eventDate,
                     "location": eventLocation,
+                    "userId": activeUser
                 }
+
                 document.querySelector("#events-form").innerHTML = "";
 
                 eventApiManager.editEventFunction(eventId, eventObject)
