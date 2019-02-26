@@ -1,24 +1,26 @@
 import newsCollection from "./apiManager.js";
 import handleEdit from "./editBuilder.js";
-
+import newsForm from "./newsForm.js";
 
 const activateEditButton = () => {
     document.querySelector("#news-cont").addEventListener("click", () => {
-        if(event.target.classList.contains("edit")){
+        if (event.target.id.includes("edit")) {
+            // handleEdit();
+
+            console.log("This is edit button")
             newsCollection.getSingleArticle(event.target.id.split("-")[2])
-            .then((singleArticle) => {
-                document.querySelector("#news-title").value = singleArticle.name;
+                .then((singleEdit) => {
+                    newsForm.buildNewsForm();
+                    document.querySelector("#news-title").value = singleEdit.title;
 
-                document.querySelector("#news-url").value = singleArticle.phone;
+                    document.querySelector("#news-url").value = singleEdit.url;
 
-                document.querySelector("#news-synopsis").value = singleArticle.email;
+                    document.querySelector("#news-synopsis").value = singleEdit.synopsis;
 
-                document.querySelector("#save-news-btn").textContent = "Edit";
-                document.querySelector("#save-news-btn").id= `edit-news-btn-${singleNewsObj.id}`;
 
-                handleEdit();
+                    handleEdit();
 
-            })
+                })
         }
     })
 }
