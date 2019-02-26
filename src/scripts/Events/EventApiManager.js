@@ -3,15 +3,15 @@
 const eventApiManager = {
     //fetches all events
     fetchAllEventsFunction: function(userId) {
-       return  fetch(`http://localhost:8088/events/userId?=${userId}`, {})
-        .then(response => response.json)
+       return  fetch(`http://localhost:8088/events?userId=${userId}`, {})
+        .then(response => response.json())
 
     },
 
     //fetches a single event
     fetchSingleEventFunction: function(id) {
        return fetch(`http://localhost:8088/events/${id}`)
-        .then(response => response.json)
+        .then(response => response.json())
 
     },
 
