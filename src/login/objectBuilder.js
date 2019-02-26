@@ -8,6 +8,7 @@ const buildUserObject = (userName, password, email) => {
         "password": password,
         "email": email
     }
+    return userObject;
 }
 
 export default buildUserObject;

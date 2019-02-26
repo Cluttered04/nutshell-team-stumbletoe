@@ -8,19 +8,19 @@ const formPrinter= {
 
     printLoginForm: () => {
 
-        document.querySelector("#body").innerHTML = formBuilder.makeLoginForm()
+        document.querySelector("#login-container").innerHTML = formBuilder.makeLoginForm()
 
     },
     removeLoginForm: () => {
-        document.querySelector("#body").innerHTML = ""
+        document.querySelector("#login-container").innerHTML = ""
 
     },
     printRegisterForm: () => {
-        document.querySelector("#body").innerHTML = formBuilder.makeRegisterForm()
+        document.querySelector("#login-container").innerHTML = formBuilder.makeRegisterForm()
 
     },
     removeRegisterForm: ()=>{
-        document.querySelector("#body").innerHTML = ""
+        document.querySelector("#login-container").innerHTML = ""
     }
 }
 
