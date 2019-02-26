@@ -20,7 +20,8 @@ As a user who needs to track tasks, I should be able to enter in a task name, an
 
 
 # Dependencies
-Install JSON Server
+
+JSON Server
 npm install -g json-server
 
 Moment 
