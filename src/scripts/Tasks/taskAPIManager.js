@@ -20,7 +20,15 @@ const api = {
 
     },
     //PUT new edited task
-
+    edit: (taskId, taskObject) => {
+        return fetch(`http://localhost:8088/tasks/${taskId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(taskObject)
+        }).then(r => r.json())
+    },
     //PATCH completed task
     checkbox: (taskId, taskPiece) => {
         return fetch(`http://localhost:8088/tasks/${taskId}`, {

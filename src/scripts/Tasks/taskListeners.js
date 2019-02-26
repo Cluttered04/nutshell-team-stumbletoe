@@ -1,3 +1,4 @@
+//Michelle Tabor - This Module activates event listeners on key parts of the DOM
 import print from "./taskPrintToDOM"
 import activateSaveButton from "./tasksSaveButton";
 import api from "./taskAPIManager"
@@ -9,20 +10,20 @@ import tasks from "./tasksManager"
 const listen = {
   activateNewTask: (userId) => {
     document.querySelector("#tasks-cont").addEventListener("click", e => {
-      if (e.target.classList.contains("new")) {
-        print.newTaskForm();
-        print.saveButton(userId);
-        activateSaveButton(userId);
+      if (e.target.classList.contains("new")) { //if the new button is clicked
+        print.newTaskForm(); //print the new task form
+        print.saveButton(userId); //print the save Button
+        activateSaveButton(userId); //activate the listeners on the save button
       }
     })
   },
   checkBoxes: () => {
     document.querySelector("#tasks-box").addEventListener("click", e => {
-      if (e.target.classList.contains("check")) {
-        const taskId = e.target.id.split("-")[2]
-        api.checkbox(taskId, object.completeTaskObject())
+      if (e.target.classList.contains("check")) { //if the check box if clicked
+        const taskId = e.target.id.split("-")[2] //gets the task id that was place previously from the db
+        api.checkbox(taskId, object.completeTaskObject()) //patch the object in the db, changing the value from false to true
           .then(() => {
-            tasks.afterLogin(sessionStorage.getItem("activeUser"))
+            tasks.afterLogin(sessionStorage.getItem("activeUser")) //reloads user's uncomplete tasks
           })
       }
     })

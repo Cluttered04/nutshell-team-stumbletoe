@@ -7,9 +7,9 @@ import afterBuild from "./tasksboxAfterBuild"
 const tasks = {
   //after login
   afterLogin: (userId) => {
-    if (sessionStorage.length > 0) {
-      print.taskbox();
-      afterBuild(userId)
+    if (sessionStorage.length > 0) { //if there is anything stored in session storage, it may not be fool proof, but it works for right now
+      print.taskbox(); //prints div structure for later use
+      afterBuild(userId) //prints the content inside the built boxes
     }
   },
 };

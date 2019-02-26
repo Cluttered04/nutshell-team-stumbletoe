@@ -7,10 +7,10 @@ import buildSingleTask from "./tasksSingleComponentBuilder";
 //builds task list and prints it to the DOM
 const build = {
   tasksList: userId => {
-    document.querySelector("#tasks-box").innerHTML = "";
-    api.all(userId).then(tasks => {
+    document.querySelector("#tasks-box").innerHTML = ""; //clears the existing content of the task box
+    api.all(userId).then(tasks => { //api call for uncomplete tasks by the active user and loops through the tasks
       tasks.forEach(singleTask => {
-          document.querySelector("#tasks-box").innerHTML += buildSingleTask(singleTask)
+          document.querySelector("#tasks-box").innerHTML += buildSingleTask(singleTask) //add single task item to items in the dom
       });
     });
   }

@@ -1,5 +1,5 @@
 //Michelle Tabor - This module builds objects that will be posted to the database
-//imports
+
 
 const object = {
   //use for new and edited tasks

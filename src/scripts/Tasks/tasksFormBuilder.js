@@ -10,10 +10,10 @@ const forms = {
     editTaskForm: (userId) => {
         console.log(userId)
     },
-    saveButton: (userId) => {
+    saveButton: (userId) => { //save button html
         return `<button type="button" class="save" id="save-tasks-btn${userId}">Save</button>`
     },
-    cancelButton: () => {
+    cancelButton: () => { //cancel button html
         return `<button type="button" class="cancel" id="canc-tasks-btn">Cancel</button>`
     }
 }
