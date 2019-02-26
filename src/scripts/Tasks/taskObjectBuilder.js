@@ -4,12 +4,12 @@
 const object = {
   //use for new and edited tasks
   taskObject: (task, dueDate) => {
-    return `{
-        userId: ${sessionStorage.getItem("activeUser")},
-        task: ${task},
-        "dueDate": ${dueDate},
-        "complete": false  
-    }`
+    return {
+      "userId": sessionStorage.getItem("activeUser"),
+      "task": `${task}`,
+      "dueDate": `${dueDate}`,
+      "complete": false
+    }
   },
   //part of a task
   completeTaskObject: tf => {
