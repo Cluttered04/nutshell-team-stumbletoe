@@ -1,3 +1,13 @@
+# Nutshell
+
+
+## Module Map:
+![Error: Image not found!](README_Images\Modules.png)
+***
+## ERD Map:
+![Error: Image not found!](README_Images\ERD.png)
+
+
 # Nutshell: The Information Dashboard
 
 You've been hired by a product company that builds productivity apps. For your first week on the job, you've been put on a team to build a new product called Nutshell. It's a one-stop dashboard for people to organize their daily tasks, events, news article, friends, and chat messages.
