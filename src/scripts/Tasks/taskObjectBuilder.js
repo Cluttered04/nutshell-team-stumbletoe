@@ -9,7 +9,7 @@ const object = {
         task: ${task},
         "dueDate": ${dueDate},
         "complete": false  
-    }`;
+    }`
   },
   //part of a task
   completeTaskObject: tf => {
