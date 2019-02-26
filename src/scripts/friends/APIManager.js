@@ -14,6 +14,11 @@ const APIManager = {
             .then(friends => friends.json())
 
     },
+    getSingleFriend: (otherFriendId)=>{
+
+        return fetch(`http://localhost:8088/users/${otherFriendId}`)
+        .then(contacts => contacts.json())
+    },
     getAllFriends: (id) => {
         const htmlString = ""
         getAllFriendsBy(userId)
