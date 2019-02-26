@@ -11,14 +11,14 @@ const print = {
   //print form
 
   newTaskForm: () => {
-    document.querySelector("#tasks-box").innerHTML = form.newTaskForm();
+    document.querySelector("#tasks-cont").innerHTML = form.newTaskForm();
   },
   //print edit form
   editForm: () => {
-    document.querySelector("#tasks-box").innerHTML = form.editForm();
+    document.querySelector("#tasks-cont").innerHTML = form.editForm();
   },
   saveButton: () => {
-    document.querySelector("#tasks-foot").innerHTML = form.saveButton();
+    document.querySelector("#tasks-cont").innerHTML = form.saveButton();
   },
   };
 

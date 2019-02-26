@@ -9,7 +9,7 @@ const dashboardActivator = () => {
     tasks.afterLogin(sessionStorage.getItem("activeUser"));
 
     //This is just a placeholder until we get all the other pieces
-    document.querySelector("#body").innerHTML = `you are logged in`
+    document.querySelector("#header").innerHTML = `you are logged in`
 
 
 }
