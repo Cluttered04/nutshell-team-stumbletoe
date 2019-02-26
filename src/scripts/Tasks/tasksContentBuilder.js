@@ -2,7 +2,7 @@
 
 //imports
 import api from "./tasksAPIManager";
-import buildSingleTask from "./tasksSingleComponentBuilder";
+import buildSingleTask from "./tasksSingleCompontentBuilder";
 
 //builds task list and prints it to the DOM
 const build = {
