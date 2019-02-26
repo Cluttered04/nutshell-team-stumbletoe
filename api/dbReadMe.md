@@ -10,7 +10,7 @@ You will have to download and setup your own JSON database and server.
 
 ### Create the Database File
 
-`cd api &amp;&amp; touch db.json`
+`cd api && touch db.json`
 
 ### Add the boilerplate to the db.json file
 
