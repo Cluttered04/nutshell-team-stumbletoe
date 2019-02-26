@@ -14,4 +14,4 @@ const activateCheckBoxes = () => {
         }
     })
 }
-export default activateCheckBoxess
+export default activateCheckBoxes

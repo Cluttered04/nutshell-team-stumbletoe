@@ -11,7 +11,7 @@ const listen = {
         print.newTaskForm();
         print.saveButton(userId);
         activateSaveButton(userId);
-        activateCheckBoxes
+        activateCheckBoxes();
       }
     })
   },
