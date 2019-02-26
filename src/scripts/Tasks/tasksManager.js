@@ -2,17 +2,15 @@
 
 //imports
 import print from "./taskPrintToDOM";
-import build from "./tasksContentBuilder";
-import listen from "./taskListeners";
+import afterBuild from "./tasksboxAfterBuild"
 
 //tasks manager main function
 const tasks = {
   //after login
-  afterLogin: userId => {
+  afterLogin: (userId) => {
     if (sessionStorage.length > 0) {
-      build.tasksList(userId);
-      print.button(userId);
-      listen.activateNewTask(userId);
+      print.taskbox();
+      afterBuild(userId)
     }
   },
   //add new task button
