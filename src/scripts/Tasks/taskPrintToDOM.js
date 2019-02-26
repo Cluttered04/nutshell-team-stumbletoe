@@ -3,31 +3,23 @@
 //imports
 import form from "./tasksFormBuilder";
 
+
 //print function object
 const print = {
   //button for new task
-  button: userId => {
-    document.querySelector(
-      "#tasks-foot"
-    ).innerHTML = `<button type="button" class="new" id="tasks-new-btn-${userId}">Add New Task</button>`;
-  },
+
   //print form
 
   newTaskForm: () => {
-    document.querySelector("#tasks-cont").innerHTML = form.newTaskForm();
+    document.querySelector("#tasks-box").innerHTML = form.newTaskForm();
   },
   //print edit form
   editForm: () => {
-    document.querySelector("#tasks-cont").innerHTML = form.editForm();
+    document.querySelector("#tasks-box").innerHTML = form.editForm();
   },
-  saveButton: ()=>{
-      document.querySelector("#tasks-foot").innerHTML = form.saveButton();
+  saveButton: () => {
+    document.querySelector("#tasks-foot").innerHTML = form.saveButton();
   },
-  taskbox: ()=>{
-    document.querySelector("#task-container").innerHTML =`<div id="task-head">TASKS</div>
-      <div id="tasks-cont"></div>
-      <div id="tasks-foot"></div>`
-  }
-};
+  };
 
 export default print;

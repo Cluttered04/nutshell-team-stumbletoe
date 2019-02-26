@@ -9,9 +9,8 @@ const tasks = {
   //after login
   afterLogin: (userId) => {
     if (sessionStorage.length > 0) {
-      print.taskbox();
       afterBuild(userId)
-    }
+      }
   },
   //add new task button
 
