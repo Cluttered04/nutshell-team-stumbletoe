@@ -1,5 +1,6 @@
 import print from "./taskPrintToDOM"
 import activateSaveButton from "./tasksSaveButton";
+import activateCheckBoxes from "./tasksCheckboxListener"
 
 
 const listen = {
@@ -10,6 +11,7 @@ const listen = {
         print.newTaskForm();
         print.saveButton(userId);
         activateSaveButton(userId);
+        activateCheckBoxes
       }
     })
   },

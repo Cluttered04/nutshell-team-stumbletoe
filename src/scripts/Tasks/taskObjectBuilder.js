@@ -12,9 +12,11 @@ const object = {
     }
   },
   //part of a task
-  completeTaskObject: tf => {
-    return `{complete: ${tf}}`;
+  completeTaskObject: () => {
+    return {
+      "complete": true
+    }
   }
-};
+}
 
 export default object

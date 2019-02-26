@@ -18,11 +18,21 @@ const api = {
             body: JSON.stringify(taskObject)
         }).then(r => r.json())
 
-    }
+    },
     //PUT new edited task
 
     //PATCH completed task
+    checkbox: (taskId, taskPiece) => {
+        return fetch(`http://localhost:8088/tasks/${taskId}`), {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(taskPiece)
+        }.then(r => r.json())
+    },
 }
+
 
 
 export default api
