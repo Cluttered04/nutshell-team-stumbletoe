@@ -8,9 +8,9 @@ const newsCollection = {
         body: JSON.stringify(newsObj)
       });
     },
-    getAllArticles: () => {
-    //   const activeUserId = sessionStorage.getItem("activeUser");
-      return fetch(`http://localhost:8088/news?userId=1`).then(r => r.json());
+    getAllUserArticles: () => {
+      const activeUserId = sessionStorage.getItem("activeUser");
+      return fetch(`http://localhost:8088/news?userId=${activeUserId}`).then(r => r.json());
     },
     deleteArticle: (newsId) => {
       return fetch(`http://localhost:8088/news/${newsId}`, {

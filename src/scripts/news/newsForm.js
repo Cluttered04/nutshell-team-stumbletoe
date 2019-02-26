@@ -40,4 +40,5 @@ const newsForm = {
   }
 };
 
+// document.querySelector("#news-cont").innerHTML = newsForm.buildNewsForm();
 export default newsForm;
