@@ -1,79 +1,99 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "Steve",
-      "password": "password",
-      "email": "me@me.com"
-    },
-    {
-      "username": "sydney",
-      "password": "wait",
-      "email": "sydneyroo@yahoo.com",
-      "id": 2
-    },
-    {
-      "username": "jordan",
-      "password": "castelloe",
-      "email": "jordan@castelloe.com",
-      "id": 3
-    },
-    {
-      "username": "george",
-      "password": "wait",
-      "email": "george@gmail.com",
-      "id": 4
-    },
-    {
-      "username": "thomas",
-      "password": "wait",
-      "email": "Thomas@gmail.com",
-      "id": 5
-    },
-    {
-      "username": "tom",
-      "password": "tom",
-      "email": "tom@gmail.com",
-      "id": 6
-    }
-  ],
-  "messages": [
-    {
-      "id": 1,
-      "userId": 1,
-      "message": "what's up?"
-    }
-  ],
-  "news": [
-    {
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "otherFriendId": 2
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "userId": 1,
-      "task": "Take out garbage"
-    }
-  ],
-  "events": [
-    {
-      "id": 1,
-      "userId": 1,
-      "name": "Workshop on how to build an App",
-      "date": "2019-02-25",
-      "location": "NewForce Academy"
-    }
-  ]
+    "users": [
+        {
+            "id": 1,
+            "username": "Steve",
+            "password": "password",
+            "email": "me@me.com"
+        },
+        {
+            "username": "sydney",
+            "password": "wait",
+            "email": "sydneyroo@yahoo.com",
+            "id": 2
+        },
+        {
+            "username": "jordan",
+            "password": "castelloe",
+            "email": "jordan@castelloe.com",
+            "id": 3
+        },
+        {
+            "username": "george",
+            "password": "wait",
+            "email": "george@gmail.com",
+            "id": 4
+        },
+        {
+            "username": "thomas",
+            "password": "wait",
+            "email": "Thomas@gmail.com",
+            "id": 5
+        },
+        {
+            "username": "tom",
+            "password": "tom",
+            "email": "tom@gmail.com",
+            "id": 6
+        }
+    ],
+    "messages": [
+        {
+            "id": 1,
+            "userId": 1,
+            "message": "what's up?"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "userId": 1,
+            "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+            "title": "Wormholes Allow Information to Escape Black Holes",
+            "synopsis": "Check out this recent discovery about workholes"
+        }
+    ],
+    "friends": [
+        {
+            "id": 1,
+            "userId": 1,
+            "otherFriendId": 2
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "otherFriendId": 3
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "otherFriendId": 5
+        },
+        {
+            "id": 4,
+            "userId": 3,
+            "otherFriendId": 1
+        },
+        {
+            "id": 5,
+            "userId": 4,
+            "otherFriendId": 1
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "userId": 1,
+            "task": "Take out garbage"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "userId": 1,
+            "name": "Workshop on how to build an App",
+            "date": "2019-02-25",
+            "location": "NewForce Academy"
+        }
+    ]
 }
