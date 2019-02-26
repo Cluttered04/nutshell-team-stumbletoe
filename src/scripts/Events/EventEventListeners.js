@@ -9,7 +9,7 @@ const eventEventListeners = {
         //Pops up form to enter new event
         document.querySelector("#events-header").addEventListener("click", () => {
             if(event.target.classList.contains("add-event-button")){
-                document.querySelector("#events-body").innerHTML += eventforms.buildSaveEventForm()
+                document.querySelector("#events-form").innerHTML = eventforms.buildSaveEventForm()
             }
         })
     },
@@ -26,6 +26,7 @@ const eventEventListeners = {
                     "date": eventDate,
                     "location": eventLocation
                 }
+                document.querySelector("#events-form").innerHTML = "";
                 eventApiManager.addNewEventFunction(eventObject)
                 .then(() => {
                     document.querySelector("#events-body").innerHTML =""
@@ -50,7 +51,7 @@ const eventEventListeners = {
                 //name, date, location, id
                 eventApiManager.fetchSingleEventFunction(eventId)
                 .then((parsedResponse) => {
-                    document.querySelector("#events-body").innerHTML += eventforms.buildEditEventForm(parsedResponse.name, parsedResponse.date, parsedResponse.location, eventId)
+                    document.querySelector("#events-form").innerHTML = eventforms.buildEditEventForm(parsedResponse.name, parsedResponse.date, parsedResponse.location, eventId)
                 })
             }
         })
@@ -69,6 +70,7 @@ const eventEventListeners = {
                     "date": eventDate,
                     "location": eventLocation,
                 }
+                document.querySelector("#events-form").innerHTML = "";
 
                 eventApiManager.editEventFunction(eventId, eventObject)
                 .then(() => {

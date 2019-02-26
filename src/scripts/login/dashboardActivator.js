@@ -1,5 +1,7 @@
 //This function imports all the event listeners and page loads from the individual modules
 //news, events, tasks, chats, and friends
+// import formPrinter from "./printToDom.js"
+
 import formPrinter from "./printToDom.js"
 import eventDashboard from "../Events/eventMain"
 
@@ -15,3 +17,5 @@ const dashboardActivator = ()=> {
 }
 
 export default dashboardActivator;
+
+//src\scripts\Events\eventMain.js

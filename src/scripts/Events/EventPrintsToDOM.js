@@ -4,19 +4,25 @@ import eventforms from "./EventFormBuilder.js";
 import eventApiManager from "./EventApiManager.js";
 import buildSingleComponent from "./EventComponentBuilder.js";
 
+var moment = require('../../lib/node_modules/moment');
+moment().format("MMM DD YYYY")
+
+
+
 
 const printsEventsToDOM = {
 
      printEventHeader: function() {
-        document.querySelector("#events-header").innerHTML = `<h3>Events</h3><button id="<button class="btn" id="add-event-button" class="add-event-button">Add Event</button>`
+        document.querySelector("#events-header").innerHTML = `<h2>Events</h2><button id="<button class="btn" id="add-event-button" class="add-event-button">Add Event</button>`
 },
     printEvents: function() {
-        const userId = sessionStorage.getItem("activeUser");
-    eventApiManager.fetchAllEventsFunction(userId)
-    .then(parsedEvents => {
-        parsedEvents.forEach(event => {
 
-            document.querySelector("#events-body").innerHTML += buildSingleComponent(event.name, event.date, event.location, event.id)
+        const userId = sessionStorage.getItem("activeUser");
+        eventApiManager.fetchAllEventsFunction(userId)
+        .then(parsedEvents => {
+            parsedEvents.forEach(event => {
+            const fixedEventDate = moment(event.date)
+            document.querySelector("#events-body").innerHTML += buildSingleComponent(event.name, fixedEventDate, event.location, event.id)
         })
 
     })
