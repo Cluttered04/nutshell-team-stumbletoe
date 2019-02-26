@@ -6,6 +6,7 @@ const afterBuild = (userId) => {
     build.tasksList(userId);
     print.button(userId);
     listen.activateNewTask(userId);
+    listen.checkBoxes();
 }
 
 export default afterBuild
