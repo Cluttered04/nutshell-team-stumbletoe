@@ -5,7 +5,7 @@
 const api = {
     //Get all tasks
     all: (userId) => {
-        return fetch(`http://localhost:8088/tasks?userId=${userId}`)
+        return fetch(`http://localhost:8088/tasks?userId=${userId}&complete=false`)
             .then(r => r.json())
     },
     //POST new task
