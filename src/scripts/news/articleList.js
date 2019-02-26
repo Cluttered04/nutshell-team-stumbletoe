@@ -27,6 +27,5 @@ const articleList = () => {
         })
 }
 
-document.querySelector("news-cont").innerHTML = "";
 
 export default articleList;
