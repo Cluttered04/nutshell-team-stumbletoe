@@ -1,4 +1,4 @@
-import newsCollection from "./newsCollection.js"
+import newsCollection from "./apiManager.js"
 import articleList from "./articleList.js"
 
 const activateDeleteButton = () => {

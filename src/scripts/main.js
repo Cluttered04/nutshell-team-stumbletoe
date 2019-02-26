@@ -6,4 +6,4 @@ import newsForm from "./news/newsForm";
 articleList();
 activateDeleteButton();
 activateEditButton();
-newsForm();
+newsForm.buildNewsForm();

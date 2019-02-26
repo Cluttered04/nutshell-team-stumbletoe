@@ -1,4 +1,4 @@
-import buildArticleObject from "./articleObjectBuilder.js";
+import buildArticleObject from "./articleObjBuilder.js";
 import newsCollection from "./apiManager.js";
 import articleList from "./articleList.js";
 import buildNewsForm from "./newsForm.js";
