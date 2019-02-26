@@ -1,8 +1,8 @@
 //Michelle Tabor - This Module activates event listeners on key parts of the DOM
-import print from "./taskPrintToDOM"
-import activateSecondary from "./tasksSaveButton";
-import api from "./taskAPIManager"
-import object from "./taskObjectBuilder"
+import print from "./tasksDOMPrinters"
+import activateSecondary from "./tasksActivateSecondaryListeners";
+import api from "./tasksAPIManager"
+import object from "./tasksObjectsBuilders"
 import tasks from "./tasksManager"
 
 

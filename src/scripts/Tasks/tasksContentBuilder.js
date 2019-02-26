@@ -1,7 +1,7 @@
 //Michelle Tabor - This module builds the entire component HTML String
 
 //imports
-import api from "./taskAPIManager";
+import api from "./tasksAPIManager";
 import buildSingleTask from "./tasksSingleComponentBuilder";
 
 //builds task list and prints it to the DOM

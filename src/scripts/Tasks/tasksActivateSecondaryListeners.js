@@ -1,6 +1,6 @@
 //Michelle Tabor - this module hosts secondary event listeners that are loaded after their targets are loaded onto the page
-import api from "./taskAPIManager"
-import object from "./taskObjectBuilder"
+import api from "./tasksAPIManager"
+import object from "./tasksObjectsBuilders"
 import tasks from "./tasksManager"
 
 //event listener fro the save and cancel buttons

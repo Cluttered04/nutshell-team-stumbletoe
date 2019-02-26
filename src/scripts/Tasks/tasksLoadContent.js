@@ -1,7 +1,7 @@
 //Michelle Tabor - This module hosts a function that calls the other functions to build out the content of the task container
 import build from "./tasksContentBuilder"
-import print from "./taskPrintToDOM"
-import listen from "./taskListeners"
+import print from "./tasksDOMPrinters"
+import listen from "./tasksPrimaryListeners"
 
 const afterBuild = (userId) => {
     build.tasksList(userId); //build the task list
