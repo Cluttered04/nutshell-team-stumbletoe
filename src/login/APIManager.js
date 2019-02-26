@@ -2,9 +2,9 @@
 //built by Sydney Wait
 
 const APIManager={
-getSingleUser: (userId)=>{
+getSingleUser: (userKey, userValue)=>{
 
-    return fetch(`http://localhost:8088/user/${userId}`)
+    return fetch(`http://localhost:8088/users?${userKey}=${userValue}`)
     .then(contacts => contacts.json())
 },
 

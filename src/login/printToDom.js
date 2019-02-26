@@ -4,23 +4,30 @@
 
 import formBuilder from "./formBuilder.js"
 
-const formPrinter= {
+const formPrinter = {
 
     printLoginForm: () => {
-
-        document.querySelector("#login-container").innerHTML = formBuilder.makeLoginForm()
-
+        document.querySelector("#login-cont").innerHTML = formBuilder.makeLoginForm()
     },
+
     removeLoginForm: () => {
-        document.querySelector("#login-container").innerHTML = ""
-
+        document.querySelector("#login-cont").innerHTML = ""
     },
+
     printRegisterForm: () => {
-        document.querySelector("#login-container").innerHTML = formBuilder.makeRegisterForm()
-
+        document.querySelector("#login-cont").innerHTML = formBuilder.makeRegisterForm()
     },
-    removeRegisterForm: ()=>{
-        document.querySelector("#login-container").innerHTML = ""
+
+    removeRegisterForm: () => {
+        document.querySelector("#login-cont").innerHTML = ""
+    },
+
+    printLogoutForm:()=>{
+        document.querySelector("#header").innerHTML=formBuilder.makeLogoutForm()
+    },
+
+    removeLogoutForm:()=>{
+        document.querySelector("#header").innerHTML=""
     }
 }
 

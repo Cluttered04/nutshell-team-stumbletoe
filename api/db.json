@@ -11,6 +11,30 @@
       "password": "wait",
       "email": "sydneyroo@yahoo.com",
       "id": 2
+    },
+    {
+      "username": "jordan",
+      "password": "castelloe",
+      "email": "jordan@castelloe.com",
+      "id": 3
+    },
+    {
+      "username": "george",
+      "password": "wait",
+      "email": "george@gmail.com",
+      "id": 4
+    },
+    {
+      "username": "thomas",
+      "password": "wait",
+      "email": "Thomas@gmail.com",
+      "id": 5
+    },
+    {
+      "username": "tom",
+      "password": "tom",
+      "email": "tom@gmail.com",
+      "id": 6
     }
   ],
   "messages": [
