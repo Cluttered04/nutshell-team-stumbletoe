@@ -2,7 +2,7 @@ module.exports = {
     options: {
         transform: [
             [
-                babelify,
+                "babelify",
                 {
                     "presets": [
                         [

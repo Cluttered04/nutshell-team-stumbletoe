@@ -6,7 +6,7 @@ const dashboardActivator = ()=> {
     formPrinter.printLogoutForm()
 
     //This is just a placeholder until we get all the other pieces
-    document.querySelector("#body").innerHTML = "you are logged in"
+    document.querySelector("#body").innerHTML = `you are logged in`
 
 
 }
