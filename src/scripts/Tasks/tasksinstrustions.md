@@ -17,3 +17,8 @@ As a user who needs to track tasks, I should be able to enter in a task name, an
 **Then** the user should be able to edit the name of the task
 **And** when the enter key is pressed, the new task name should be saved to the database
 **And** the task list should be updated to display the new task name
+
+
+# Dependencies
+Install JSON Server
+npm install -g json-server

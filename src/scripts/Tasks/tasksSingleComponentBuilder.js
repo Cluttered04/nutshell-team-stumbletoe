@@ -1,8 +1,8 @@
 //Michelle Tabor - This module builds a single html string
 
 //build single task
-const singleTask = (dueDate, taskName) =>{
-    return `<input type="checkbox id="task-check"></input><p><strong>${dueDate}</strong> - ${taskName}`
+const buildSingleTask = (task) =>{
+    return `<input type="checkbox" id="task-check"><strong>${task.dueDate}</strong> - ${task.task}</input><br />`
 }
 
-export default singleTask
+export default buildSingleTask

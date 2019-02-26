@@ -35,7 +35,22 @@
             "id": 1,
             "userId": 1,
             "task": "Take out garbage",
-            "dueDate": "02/15/2019"
+            "dueDate": "02/15/2019",
+            "complete": false
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "task": "Take out garbage",
+            "dueDate": "02/15/2019",
+            "complete": true
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "task": "Take out garbage",
+            "dueDate": "02/15/2019",
+            "complete": false
         }
     ],
     "events":[

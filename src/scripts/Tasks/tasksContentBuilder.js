@@ -1,19 +1,25 @@
 //Michelle Tabor - This module builds the entire component HTML String
 
 //imports
-import single from "./tasksSingleComponentBuilder"
-import api from "./taskAPIManager"
-//build task list
-const build = {
-    taskList: (userId) => {
-        api.all(userId)
-            .then((tasks) => tasks.forEach(task => {
-                console.log(task)
-                if (task.complete === true) {
-                    return htmlString += single(task.dueDate, task.task)
-                } else {}
-            }))
-    }
-}
+import api from "./taskAPIManager";
+import buildSingleTask from "./tasksSingleComponentBuilder";
 
-export default build
+//builds task list and prints it to the DOM
+const build = {
+  tasksList: userId => {
+    document.querySelector("#tasks-cont").innerHTML = "";
+    api.all(userId).then(tasks => {
+      tasks.forEach(singleTask => {
+          if(tasks.complete !== true){
+              console.log(singleTask)
+            document.querySelector("#tasks-cont").innerHTML += buildSingleTask(singleTask)
+          } else{
+              document.querySelector("#tasks-cont").innerHTML = `<p class="error">All Caught Up!</p>`
+          }
+        ;
+      });
+    });
+  }
+};
+
+export default build;

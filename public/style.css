@@ -11,3 +11,6 @@ div{
 #tasks-cont{
     overflow: scroll;
 }
+.error{
+    color: red;
+}
