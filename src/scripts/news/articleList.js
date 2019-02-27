@@ -12,15 +12,14 @@ const articleList = () => {
         .then(news => {
             news.forEach(singleArticle => {
                 document.querySelector("#news-cont").innerHTML += article(singleArticle);
-
             })
         // }).then(() => {
         //     document.querySelector("#news-cont").innerHTML = newsForm.newButton();
         // }).then(() => {
         //     newsForm.activateNewButton();
 
-        // }).then (() => {
-        //     newsForm.activateSaveButton();
+        }).then (() => {
+            newsForm.activateSaveButton();
 
         // }).then (() => {
 

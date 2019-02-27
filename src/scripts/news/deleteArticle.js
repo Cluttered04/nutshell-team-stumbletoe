@@ -15,4 +15,5 @@ const activateDeleteButton = () => {
     })
 }
 
+
 export default activateDeleteButton;

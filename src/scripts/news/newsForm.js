@@ -9,7 +9,7 @@ const newsForm = {
   activateNewButton: () => {
     document.querySelector("#news-cont").addEventListener("click", () => {
       if (event.target.id === "new-news-btn") {
-        document.querySelector("#news-cont").innerHTML += newsForm.buildNewsForm();
+        document.querySelector("#news-cont").innerHTML = newsForm.buildNewsForm();
       }
     })
   },
@@ -37,7 +37,7 @@ const newsForm = {
 
         newsCollection.saveNewArticle(objectToPost)
           .then(() => {
-            document.querySelector("#news-cont").innerHTML = articleList();
+            document.querySelector("#news-cont").innerHTML += articleList();
 
           })
 
@@ -47,9 +47,6 @@ const newsForm = {
   }
 };
 
-document.querySelector("#news-cont").innerHTML = newsForm.newButton();
-newsForm.activateNewButton();
-newsForm.activateSaveButton();
 
 // document.querySelector("#news-cont").innerHTML = newsForm.buildNewsForm();
 export default newsForm;
