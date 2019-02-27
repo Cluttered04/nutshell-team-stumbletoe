@@ -5,7 +5,7 @@ import formPrinter from "./printToDom.js"
 import buildUserObject from "./objectBuilder.js"
 import APIManager from "./APIManager.js"
 import dashboardActivator from "./dashboardActivator.js";
-
+import dashboardDeactivator from "./dashboardDeactivator.js";
 
 
 const loginManager = () => {
@@ -30,7 +30,6 @@ const loginManager = () => {
 
                             //this activates the dashboard
                             dashboardActivator()
-
                         }
                         else {
                             window.alert("The password is incorrect!")
@@ -46,6 +45,7 @@ const loginManager = () => {
         if (event.target.id === "reg-btn") {
             console.log("you clicked the register button")
             formPrinter.printRegisterForm()
+
 
         }
         //if user clicks the submit button, registration will be posted to database
@@ -64,11 +64,15 @@ const loginManager = () => {
 
                         const userObject = buildUserObject(userName, password, email)
                         console.log("this is the userObject", userObject)
-                        APIManager.addUser(userObject);
-                        formPrinter.removeRegisterForm()
-                        //this activates the dashboard
-                        dashboardActivator()
-
+                        APIManager.addUser(userObject)
+                            .then(() => {
+                                APIManager.getSingleUser("username", userName)
+                                    .then((singleUser) => {
+                                        sessionStorage.setItem("activeUser", singleUser[0].id)
+                                        formPrinter.removeRegisterForm()
+                                        dashboardActivator()
+                                    })
+                            })
                     }
                     else {
                         //username is already in database, do not proceed
@@ -84,7 +88,7 @@ const loginManager = () => {
             sessionStorage.removeItem("activeUser")
             //this is just a placeholder until we have the dashboard //
             formPrinter.removeLogoutForm()
-            document.querySelector("#body").innerHTML = ""
+            dashboardDeactivator()
             formPrinter.printLoginForm()
         }
     })
