@@ -1,5 +1,4 @@
-import activateDeleteButton from "./deleteArticle";
-import formBuilder from "./formBuilder";
+import newsEventListeners from "./newsManager";
 
 const article = (singleNewsObj) => {
     return `<div>
@@ -14,7 +13,7 @@ const article = (singleNewsObj) => {
 
  }
 
-//  activateDeleteButton();
+ newsEventListeners.activateDeleteButton();
 //  editForm.activateEditButton();
 
  export default article;

@@ -15,7 +15,7 @@ const handleEdit = () => {
 
       const objectToPost = buildArticleObject(title, url, synopsis);
 
-      newsCollection.editArticle(activeUserId, objectToPost).then(() => {
+      newsCollection.getAllUserArticles(activeUserId, objectToPost).then(() => {
         articleList();
         // document.querySelector("#news-cont").innerHTML = buildNewsForm.buildForm();
       });
