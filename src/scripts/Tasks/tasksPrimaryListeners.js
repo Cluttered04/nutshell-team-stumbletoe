@@ -38,7 +38,8 @@ const listen = {
               console.log(sharks)
               print.editForm(sharks)
               print.saveButton(sharks.id)
-              activateSecondary.editButton();
+              activateSecondary.editButton()
+              activateSecondary.enterOnEdit()
             }
 
 
