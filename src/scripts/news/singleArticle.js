@@ -2,6 +2,9 @@ import activateDeleteButton from "./deleteArticle";
 import editForm from "./editForm";
 
 const article = (singleNewsObj) => {
+    activateDeleteButton();
+    editForm.activateEditButton();
+
     return `<div>
     <h3>${singleNewsObj.title}</h3>
     <p><a href="${singleNewsObj.url}">${singleNewsObj.url}</a></p>
@@ -10,9 +13,11 @@ const article = (singleNewsObj) => {
     <button class="edit-news-btn" id="edit-news-${singleNewsObj.id}">Edit</button>
  </div>`
 
+
+
  }
 
- activateDeleteButton();
- editForm.activateEditButton();
+//  activateDeleteButton();
+//  editForm.activateEditButton();
 
  export default article;

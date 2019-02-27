@@ -14,8 +14,18 @@ const articleList = () => {
                 document.querySelector("#news-cont").innerHTML += article(singleArticle);
 
             })
+        // }).then(() => {
+        //     document.querySelector("#news-cont").innerHTML = newsForm.newButton();
+        // }).then(() => {
+        //     newsForm.activateNewButton();
+
+        // }).then (() => {
+        //     newsForm.activateSaveButton();
+
+        // }).then (() => {
+
         })
 
-    }
+}
 
 export default articleList;

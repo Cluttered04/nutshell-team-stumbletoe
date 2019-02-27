@@ -10,7 +10,6 @@ const newsActivator = () => {
     articleList();
     document.querySelector("#news-cont").innerHTML = newsForm.newButton();
     newsForm.activateNewButton();
-    newsForm.activateSaveButton();
 }
 
 export default newsActivator

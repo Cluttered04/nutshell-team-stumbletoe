@@ -8,9 +8,9 @@ const editForm = {
         <div>
           <h3>Edit Article</h3>
           <form action="">
-            <input type="text"  id="news-title" placeholder="Enter a Title">
-            <input type="text"  id="news-url" placeholder="Enter URL to Article">
-            <input type="text" id="news-synopsis" placeholder="Enter a synopsis">
+            <input type="text"  id="news-title">
+            <input type="text"  id="news-url">
+            <input type="text" id="news-synopsis">
           </form>
            <button id="save-news-btn">Save</button>
         </div>`;
@@ -19,7 +19,7 @@ const editForm = {
     activateEditButton: () => {
         document.querySelector("#news-cont").addEventListener("click", () => {
             if (event.target.id.includes("edit")) {
-                // handleEdit();
+                handleEdit();
 
                 console.log("This is edit button")
                 newsCollection.getSingleArticle(event.target.id.split("-")[2])
@@ -32,11 +32,14 @@ const editForm = {
                         document.querySelector("#news-synopsis").value = singleEdit.synopsis;
 
 
-                        handleEdit();
+                        // handleEdit();
 
                     })
             }
         })
     },
 }
+
+// editForm.activateEditButton();
+
 export default editForm;

@@ -47,5 +47,9 @@ const newsForm = {
   }
 };
 
+document.querySelector("#news-cont").innerHTML = newsForm.newButton();
+newsForm.activateNewButton();
+newsForm.activateSaveButton();
+
 // document.querySelector("#news-cont").innerHTML = newsForm.buildNewsForm();
 export default newsForm;
