@@ -16,15 +16,25 @@ const printsEventsToDOM = {
         document.querySelector("#events-header").innerHTML = `<h2>Events</h2><button id="<button class="btn" id="add-event-button" class="add-event-button">Add Event</button>`
 },
     printEvents: function() {
-
+        const eventDisplayArray = [];
         const userId = sessionStorage.getItem("activeUser");
         eventApiManager.fetchAllEventsFunction(userId)
         .then(parsedEvents => {
             parsedEvents.forEach(event => {
-            const fixedEventDate = moment(event.date).format("MMM DD YYYY")
-            document.querySelector("#events-body").innerHTML += buildSingleComponent(event.name, fixedEventDate, event.location, event.id)
+            eventDisplayArray.push(event);
+            console.log(eventDisplayArray);
+
         })
 
+    }).then(() => {
+        eventDisplayArray.sort(function(a,b){
+            a = new Date(a.date);
+            b = new Date (b.date);
+            return a>b ? -1 : a<b ? 1 : 0
+        }); for(let i = 0; i < 5; i ++){
+            const fixedEventDate = moment(eventDisplayArray[i].date).format("MMM DD YYYY")
+            document.querySelector("#events-body").innerHTML += buildSingleComponent(eventDisplayArray[i].name, fixedEventDate, eventDisplayArray[i].location, eventDisplayArray[i].id)
+        }
     })
     }
 
