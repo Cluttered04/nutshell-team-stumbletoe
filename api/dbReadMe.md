@@ -25,3 +25,5 @@ _Make sure you are in the_ _api_ _directory of your project._
 `json-server -p 8088 -w database.json`
 
 For this application to launch correctly, json-server should always be running on port 8088 and the http-server on a different port.
+
+Also works with Grunt Task Runner if you have it installed

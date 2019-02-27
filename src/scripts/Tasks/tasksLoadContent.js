@@ -11,13 +11,13 @@ const afterLogin = {
         listen.SaveButton() //activates the listeners on the save and cancel buttons
         listen.checkBoxes() //activates the listener on the check boxes
         listen.loadEdit() //loads event listener on the task names
-        listen.editButton()
-        listen.enterOnEdit()
+        listen.editButton() //loads event listener for the edit buttons
+        listen.enterOnEdit() //loads keypress listener
 
     },
     eventTrigger: (userId) => {
         build.tasksList(userId); //build the task list
-        print.button(userId);
+        print.button(userId); //prints save new and cancel button
     }
 }
 

@@ -8,7 +8,7 @@ import afterLogin from "./tasksLoadContent";
 
 
 const listen = {
-  activateNewTask: () => {
+  activateNewTask: () => { //Listener for the New Task Button
     document.querySelector("#tasks-foot").addEventListener("click", e => {
       if (e.target.classList.contains("new")) { //if the new button is clicked
         print.newTaskForm(); //print the new task form
@@ -16,7 +16,7 @@ const listen = {
       }
     })
   },
-  checkBoxes: () => {
+  checkBoxes: () => { //listener for the checkboxes
     document.querySelector("#tasks-box").addEventListener("click", e => {
       if (e.target.classList.contains("check")) { //if the check box if clicked
         const taskId = e.target.id.split("-")[2] //gets the task id that was place previously from the db
@@ -27,16 +27,15 @@ const listen = {
       }
     })
   },
-  loadEdit: () => {
+  loadEdit: () => { //listener on the save edit and cancel buttons
     document.querySelector("#tasks-box").addEventListener("click", e => {
-      if (e.target.classList.contains("taskN")) {
-        const taskId = e.target.id.split("-")[2];
-        document.querySelector("#tasks-box").innerHTML = "";
-        api.single(taskId)
-          .then(sharks => {
-            console.log(sharks)
-            print.editForm(sharks)
-            print.saveEditButton(sharks.id)
+      if (e.target.classList.contains("taskN")) { //if the titles for the tasks are clicked
+        const taskId = e.target.id.split("-")[2]; //task id from span id
+        document.querySelector("#tasks-box").innerHTML = ""; //clears the task box container
+        api.single(taskId)//get single task from api
+          .then(sharks => { //sharks is taco
+            print.editForm(sharks) //print edit form for sharks
+            print.saveEditButton(sharks.id) //prints save edit form with sharks id
           })
       }
     })
@@ -55,28 +54,28 @@ const listen = {
       }
     })
   },
-  editButton: () => {
+  editButton: () => { //listener for save edit and cancel button
     document.querySelector("#tasks-foot").addEventListener("click", e => {
-      const taskId = e.target.id.split("-")[3]
+      const taskId = e.target.id.split("-")[3] //gets the task id from the button id
       if (e.target.classList.contains("save-edit")) {
-        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
+        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends single updated task to the api
           .then(() => {
-            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
+            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks after update has been posted
 
           })
       }
     })
   },
-  enterOnEdit: () => {
+  enterOnEdit: () => { //listener for the ENTER keypress
     document.querySelector("#tasks-box").addEventListener('keypress', e => {
-      const nodeName = document.getElementsByName("task")
-      const tId = nodeName[0].attributes[2].nodeValue
-      const taskId = tId.split("-")[3]
-      if (e.keyCode === 13) {
-        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
+      const nodeName = document.getElementsByName("task") //grabbing the task id from dom component
+      const tId = nodeName[0].attributes[2].nodeValue//had to dig deep for it
+      const taskId = tId.split("-")[3]//finally splitting the id from the nodeList
+      if (e.keyCode === 13) { //keycode 13 is the ENTER key
+        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends the edited task to the api
           .then(() => {
             afterLogin.eventTrigger(sessionStorage.getItem("activeUser"))
-            //load tasks
+            //load tasks after posting
           })
       }
     })
