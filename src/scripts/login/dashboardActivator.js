@@ -10,11 +10,10 @@ const dashboardActivator = () => {
     formPrinter.printLogoutForm()
     friendActivator()
 
-    //This is just a placeholder until we get all the other pieces
-    document.querySelector("#header").innerHTML = `you are logged in`
 
     //Adds event dashboard
     eventDashboard();
+    console.log("Activator is running!")
 
 }
 

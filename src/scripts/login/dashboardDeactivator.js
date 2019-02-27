@@ -2,11 +2,13 @@
 // built by Sydney Wait
 
 import friendActivator from "../friends/friendActivator";
+import eventDeactivator from "../Events/EventDeactivator";
 
 const dashboardDeactivator = () => {
 
     document.querySelector("#frnds-cont").innerHTML = ""
     // insert your functions or HTML strings that need to be cleared on logout
+    eventDeactivator();
 
 }
 
