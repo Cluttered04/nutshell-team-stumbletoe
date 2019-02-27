@@ -1,5 +1,5 @@
 import activateDeleteButton from "./deleteArticle";
-import activateEditButton from "./editForm";
+import editForm from "./editForm";
 
 const article = (singleNewsObj) => {
     return `<div>
@@ -13,6 +13,6 @@ const article = (singleNewsObj) => {
  }
 
  activateDeleteButton();
- activateEditButton();
+ editForm.activateEditButton();
 
  export default article;

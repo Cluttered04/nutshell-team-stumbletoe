@@ -9,7 +9,7 @@ import newsForm from "./newsForm.js";
 const newsActivator = () => {
     articleList();
     document.querySelector("#news-cont").innerHTML = newsForm.newButton();
-    // newsForm.activateNewButton();
+    newsForm.activateNewButton();
     newsForm.activateSaveButton();
 }
 
