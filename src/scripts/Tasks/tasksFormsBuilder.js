@@ -14,13 +14,16 @@ const forms = {
 <input type="date" name="dueDate" id="task-date-input-${taskObject.id}" value="${taskObject.dueDate}"></input>`
     },
     saveButton: (userId) => { //save button html
-        return `<button type="button" class="save" id="save-tasks-btn-${userId}">Save</button>`
+        return `<button type="button" class="save-new" id="save-tasks-btn-${userId}">Save</button>`
     },
     cancelButton: () => { //cancel button html
         return `<button type="button" class="cancel" id="canc-tasks-btn">Cancel</button>`
     },
     saveEdit: (taskId) => {
         return `<button type="button" class="edit" id="save-edit-btn-${taskId}">Save Edit</button>`
+    },
+    saveEditButton: (userId) => { //save edit form button
+        return `<button type="button" class="save-edit" id="save-tasks-btn-${userId}">Save</button>`
     }
 }
 

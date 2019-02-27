@@ -22,6 +22,9 @@ const print = {
   saveButton: (userId) => {
     document.querySelector("#tasks-foot").innerHTML = form.saveButton(userId) + form.cancelButton();
   },
+  saveEditButton: (userId) => {
+    document.querySelector("#tasks-foot").innerHTML = form.saveEditButton(userId) + form.cancelButton();
+  },
   taskbox: () => {
     document.querySelector("#tasks-cont").innerHTML = `<div id="tasks-head">TASKS</div>
       <div id="tasks-box"></div><div id="tasks-foot"></div>`
