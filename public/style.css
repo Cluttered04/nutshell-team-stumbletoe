@@ -1,16 +1,5 @@
-section{
-    border: 1px solid gray;
-    margin: 0.5em;
-    padding: 0.5em;
-}
-div{
-    border: 1px solid gray;
-    padding: 0.5em;
-    margin: 0.5em;
-}
-#tasks-cont{
-    overflow: scroll;
-}
-.error{
-    color: red;
+.earliest-event {
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: tan;
 }
