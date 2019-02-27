@@ -2,17 +2,19 @@
 // built by Sydney Wait
 
 import APIManager from "./friendAPIManager"
-const friendBuilder ={
 
-    buildFriends: (userId) => {
+
+const buildFriends = (userId) => {
     let htmlString = "<h2>Friends:</h2>"
     APIManager.getAllFriendsByFriend(userId)
         .then(friends => {
             friends.forEach(friend => {
                 htmlString += `<h4>${friend.user.username}<h4>`
+                document.querySelector("#frnds-cont").innerHTML = htmlString;
+
             })
         })
-        .then(() => {
+        // .then(() => {
             APIManager.getAllFriendsByUser(userId)
                 .then(friends => {
                     friends.forEach(friend => {
@@ -24,13 +26,12 @@ const friendBuilder ={
                                 // console.log(htmlString)
                                 document.querySelector("#frnds-cont").innerHTML = htmlString;
                             })
+
                     })
+
                 })
-        })
+        // })
+
 }
-}
 
-
-
-
-export default friendBuilder
+export default buildFriends
