@@ -6,7 +6,8 @@ import eventDeactivator from "../Events/EventDeactivator";
 
 const dashboardDeactivator = () => {
 
-    document.querySelector("#frnds-cont").innerHTML = ""
+    document.querySelector("#frnds-list").innerHTML = ""
+    document.querySelector("#frnds-input").innerHTML = ""
     // insert your functions or HTML strings that need to be cleared on logout
     eventDeactivator();
 

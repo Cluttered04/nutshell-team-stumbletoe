@@ -10,7 +10,7 @@ const buildFriends = (userId) => {
         .then(friends => {
             friends.forEach(friend => {
                 htmlString += `<h4>${friend.user.username}<h4>`
-                document.querySelector("#frnds-cont").innerHTML = htmlString;
+                document.querySelector("#frnds-list").innerHTML = htmlString;
 
             })
         })
@@ -20,11 +20,11 @@ const buildFriends = (userId) => {
                     friends.forEach(friend => {
                         const otherFriendId = friend.otherFriendId
 
-                        APIManager.getSingleFriend(otherFriendId)
+                        APIManager.getSingleFriendbyId(otherFriendId)
                             .then((singleFriend) => {
                                 htmlString += `<h4>${singleFriend.username}<h4>`
                                 // console.log(htmlString)
-                                document.querySelector("#frnds-cont").innerHTML = htmlString;
+                                document.querySelector("#frnds-list").innerHTML = htmlString;
                             })
 
                     })
