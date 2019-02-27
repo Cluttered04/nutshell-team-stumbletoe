@@ -2,8 +2,11 @@
 //news, events, tasks, chats, and friends
 import formPrinter from "./printToDom.js"
 import tasks from "../scripts/Tasks/tasksManager"
+import friendActivator from "../friends/friendActivator.js";
+
 const dashboardActivator = () => {
     formPrinter.printLogoutForm()
+    friendActivator()
 
     //this prints the tasks section after login - MT
     tasks.afterLogin(sessionStorage.getItem("activeUser"));
