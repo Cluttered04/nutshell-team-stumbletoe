@@ -2,6 +2,7 @@
 import api from "./tasksAPIManager"
 import object from "./tasksObjectsBuilders"
 import tasks from "./tasksManager"
+import afterBuild from "./tasksLoadContent"
 
 //event listener fro the save and cancel buttons
 const activateSecondary = {
@@ -10,12 +11,12 @@ const activateSecondary = {
             if (e.target.classList.contains("save")) { //save button
                 api.new(object.taskObject(document.querySelector("#task-name-input").value, document.querySelector("#task-date-input").value)) //builds a json object from the input values and posts that to the API as a new entry
                     .then(() => {
-                        tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                        afterBuild(sessionStorage.getItem("activeUser")) //load tasks
                     })
             }
             if (e.target.classList.contains("cancel")) { //cancel button
                 document.querySelector("#tasks-box").innerHTML = ""; //listening to the tasks box
-                tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                afterBuild(sessionStorage.getItem("activeUser")) //load tasks
             }
         })
     },
@@ -24,12 +25,12 @@ const activateSecondary = {
             const taskId = e.target.id.split("-")[3]
             if (e.target.classList.contains("cancel")) { //cancel button
                 document.querySelector("#tasks-box").innerHTML = ""; //sets Task-box to empty
-                tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                afterBuild(sessionStorage.getItem("activeUser")) //load tasks
             }
             if (e.target.classList.contains("save")) {
                 api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
                     .then(() => {
-                        tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                        afterBuild(sessionStorage.getItem("activeUser")) //load tasks
                     })
             }
         })
@@ -42,7 +43,7 @@ const activateSecondary = {
             if (e.keyCode === 13) {
                 api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
                     .then(() => {
-                        tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                        afterBuild(sessionStorage.getItem("activeUser")) //load tasks
                     })
             }
         })

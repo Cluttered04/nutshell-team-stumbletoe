@@ -10,7 +10,7 @@ const build = {
     document.querySelector("#tasks-box").innerHTML = ""; //clears the existing content of the task box
     api.all(userId).then(tasks => { //api call for uncomplete tasks by the active user and loops through the tasks
       tasks.forEach(singleTask => {
-          document.querySelector("#tasks-box").innerHTML += buildSingleTask(singleTask) //add single task item to items in the dom
+        document.querySelector("#tasks-box").innerHTML += buildSingleTask(singleTask) //add single task item to items in the dom
       });
     });
   }
