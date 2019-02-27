@@ -23,7 +23,7 @@ const activateSecondary = {
         document.querySelector("#tasks-foot").addEventListener("click", e => {
             const taskId = e.target.id.split("-")[3]
             if (e.target.classList.contains("cancel")) { //cancel button
-                document.querySelector("#tasks-box").innerHTML = ""; //listening to the tasks box
+                document.querySelector("#tasks-box").innerHTML = ""; //sets Task-box to empty
                 tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
             }
             if (e.target.classList.contains("save")) {
@@ -35,7 +35,8 @@ const activateSecondary = {
         })
     },
     enterOnEdit: () => {
-        document.querySelector("#tasks-foot").addEventListener('keypress', e => {
+        document.querySelector("#tasks-box").addEventListener('keypress', e => {
+            const taskId = document.querySelector("#task-name-input")
             if (e.keyCode === 13) {
                 api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
                     .then(() => {
