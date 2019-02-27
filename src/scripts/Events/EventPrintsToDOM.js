@@ -33,7 +33,9 @@ const printsEventsToDOM = {
             a = new Date(a.date);
             b = new Date (b.date);
             return a<b ? -1 : a>b ? 1 : 0
-        }); for(let i = 0; i < 5; i ++){
+        });
+            if(eventDisplayArray.length >= 5) {
+            for(let i = 0; i < 5; i ++){
             //converts the date to MM/DD/YYYY format
             const fixedEventDate = moment(eventDisplayArray[i].date).format("MMM DD YYYY")
 
@@ -42,6 +44,15 @@ const printsEventsToDOM = {
                 document.querySelector("#events-body").innerHTML += buildEventComponents.buildNewestComponent(eventDisplayArray[i].name, fixedEventDate, eventDisplayArray[i].location, eventDisplayArray[i].id)
             } else {
             document.querySelector("#events-body").innerHTML += buildEventComponents.buildSingleComponent(eventDisplayArray[i].name, fixedEventDate, eventDisplayArray[i].location, eventDisplayArray[i].id)
+            }
+        }} else {
+            for(let i = 0; i < eventDisplayArray.length; i++){
+                const fixedEventDate = moment(eventDisplayArray[i].date).format("MMM DD YYYY")
+                if(eventDisplayArray[i] === eventDisplayArray[0]){
+                    document.querySelector("#events-body").innerHTML += buildEventComponents.buildNewestComponent(eventDisplayArray[i].name, fixedEventDate, eventDisplayArray[i].location, eventDisplayArray[i].id)
+                } else {
+                document.querySelector("#events-body").innerHTML += buildEventComponents.buildSingleComponent(eventDisplayArray[i].name, fixedEventDate, eventDisplayArray[i].location, eventDisplayArray[i].id)
+                }
             }
         }
     })
