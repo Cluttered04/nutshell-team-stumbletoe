@@ -2,15 +2,14 @@
 // built by Sydney Wait
 
 import APIManager from "./friendAPIManager"
+const friendBuilder ={
 
-
-const buildFriends = (userId) => {
+    buildFriends: (userId) => {
     let htmlString = "<h2>Friends:</h2>"
     APIManager.getAllFriendsByFriend(userId)
         .then(friends => {
             friends.forEach(friend => {
                 htmlString += `<h4>${friend.user.username}<h4>`
-
             })
         })
         .then(() => {
@@ -25,12 +24,13 @@ const buildFriends = (userId) => {
                                 // console.log(htmlString)
                                 document.querySelector("#frnds-cont").innerHTML = htmlString;
                             })
-
                     })
-
                 })
         })
-
+}
 }
 
-export default buildFriends
+
+
+
+export default friendBuilder
