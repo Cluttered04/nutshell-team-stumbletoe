@@ -36,7 +36,10 @@ const activateSecondary = {
     },
     enterOnEdit: () => {
         document.querySelector("#tasks-box").addEventListener('keypress', e => {
-            const taskId = document.querySelector("#task-name-input")
+            const nodeName = document.getElementsByName("task")
+            console.log(nodeName)
+            const taskId = nodeName[0]
+            console.log(taskId)
             if (e.keyCode === 13) {
                 api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
                     .then(() => {
