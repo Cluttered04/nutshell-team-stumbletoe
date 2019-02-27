@@ -59,6 +59,12 @@
       "password": "man",
       "email": "sydneywait@gmail.com",
       "id": 10
+    },
+    {
+      "username": "cat",
+      "password": "dog",
+      "email": "sydneyroo@yahoo.com",
+      "id": 11
     }
   ],
   "messages": [

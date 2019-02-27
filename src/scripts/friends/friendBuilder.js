@@ -1,11 +1,11 @@
 //This module goes and finds all the friend relationships of a single user and posts to dom
 // built by Sydney Wait
 
-import APIManager from "./APIManager"
+import APIManager from "./friendAPIManager"
 
 
 const buildFriends = (userId) => {
-    let htmlString = "<h1>Friends:</h1>"
+    let htmlString = "<h2>Friends:</h2>"
     APIManager.getAllFriendsByFriend(userId)
         .then(friends => {
             friends.forEach(friend => {
