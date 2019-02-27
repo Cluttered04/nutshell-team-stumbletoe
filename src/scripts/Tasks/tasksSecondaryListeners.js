@@ -27,8 +27,18 @@ const activateSecondary = {
                 tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
             }
             if (e.target.classList.contains("save")) {
-                api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value ))
-                .then(() => {
+                api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
+                    .then(() => {
+                        tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
+                    })
+            }
+        })
+    },
+    enterOnEdit: () => {
+        document.querySelector("#tasks-foot").addEventListener('keypress', e => {
+            if (e.keyCode === 13) {
+                api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value))
+                    .then(() => {
                         tasks.afterLogin(sessionStorage.getItem("activeUser")) //load tasks
                     })
             }
