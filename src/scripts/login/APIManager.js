@@ -11,8 +11,6 @@ getSingleUser: (userKey, userValue)=>{
 getAllUsers: ()=>{
     return fetch("http://localhost:8088/users")
             .then(contacts => contacts.json())
-
-
 },
 
 addUser:(userObject)=>{
