@@ -1,8 +1,8 @@
 //This function imports all the event listeners and page loads from the individual modules
 //news, events, tasks, chats, and friends
 import formPrinter from "./printToDom.js"
-import tasks from "../scripts/Tasks/tasksManager"
-import friendActivator from "../friends/friendActivator.js";
+import tasks from "../Tasks/tasksManager"
+import friendActivator from "../friends/friendActivator";
 
 const dashboardActivator = () => {
     formPrinter.printLogoutForm()
