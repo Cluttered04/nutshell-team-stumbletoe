@@ -1,20 +1,20 @@
 const formBuilder = {
-    editForm: () => {
+    editForm: (singleParam) => {
         return `
-        <div>
+        <div id="edit-form">
           <h3>Edit Article</h3>
           <form action="">
-            <input type="text"  id="news-title" value="title">
-            <input type="text"  id="news-url" value="url">
-            <input type="text" id="news-synopsis" value="synopsis">
+            <input type="text"  id="news-title-${singleParam.id}" value="${singleParam.title}">
+            <input type="text"  id="news-url-${singleParam.id}" value="${singleParam.url}">
+            <input type="text" id="news-synopsis-${singleParam.id}" value="${singleParam.synopsis}">
           </form>
-           <button id="save-news-btn">Save</button>
+           <button id="save-edit-news-btn-${singleParam.id}">Save</button>
         </div>`;
     },
 
     newsForm: () => {
         return `
-        <div>
+        <div id="new-form">
           <h3>Add an Article</h3>
           <form action="">
             <input type="text"  id="news-title" placeholder="Enter a Title">

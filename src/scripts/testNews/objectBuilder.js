@@ -3,6 +3,7 @@ const buildArticleObject = (titleParam, urlParam, synopsisParam) => {
       title: titleParam,
       url: urlParam,
       synopsis: synopsisParam,
+      date: new Date(),
       userId: sessionStorage.getItem("activeUser")
     };
   };

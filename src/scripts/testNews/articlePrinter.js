@@ -1,19 +1,17 @@
 import formBuilder from "./formBuilder.js"
-import newsEventListeners from "./newsManager.js";
 
 const articlePrinter = {
     buildNewForm: () => {
         document.querySelector("#news-cont").innerHTML = formBuilder.newsForm()
-            newsEventListeners.activateSaveButton()
     },
     removeNewForm: () => {
-        document.querySelector("#news-cont").innerHTML = ""
+        document.querySelector("#new-form").innerHTML = ""
     },
-    buildEditForm: () => {
-        document.querySelector("#news-cont").innerHTML = formBuilder.editForm()
+    buildEditForm: (singleParam) => {
+        document.querySelector("#news-cont").innerHTML = formBuilder.editForm(singleParam)
     },
     removeEditForm: () => {
-        document.querySelector("news-cont").innerHTML = ""
+        document.querySelector("#edit-form").innerHTML = ""
     }
 }
 

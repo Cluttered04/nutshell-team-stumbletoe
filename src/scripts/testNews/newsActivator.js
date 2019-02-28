@@ -1,10 +1,12 @@
-import articleList from "./articleList.js";
+import newsContent from "./articleList.js";
 import formBuilder from "./formBuilder.js";
-import newsEventListeners from "./newsManager.js";
 
+//Activator for Dashboard
 const newnewsActivator = () => {
     document.querySelector("#news-header").innerHTML = formBuilder.newButton()
-    newsEventListeners.activateNewButton()
-    articleList();
+    newsContent.eventListeners();
+    newsContent.newsList();
 }
+
+
 export default newnewsActivator

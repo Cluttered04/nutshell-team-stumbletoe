@@ -21,5 +21,8 @@
     "load-grunt-config": "^0.19.2",
     "nss-domcomponent": "^0.1.0",
     "grunt-bg-shell": "^2.3.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
   }
 }
