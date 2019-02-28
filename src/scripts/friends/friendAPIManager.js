@@ -37,14 +37,17 @@ const APIManager = {
         return fetch(`http://localhost:8088/friends?userId=${id1}&otherFriendId=${id2}`)
         .then(contacts => contacts.json())
     },
-    getAllFriends: (id) => {
-        const htmlString = ""
-        getAllFriendsBy(userId)
-            .then((friend) => {
+    deleteSingleFriendRelationship: (id) => {
+        return fetch(`http://localhost:8088/friends/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+
+        })
 
 
 
-            })
     }
 
 

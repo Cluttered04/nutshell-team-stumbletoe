@@ -9,6 +9,7 @@ import buildFriends from "./friendBuilder";
 const friendManager = () => {
     const activeUser = sessionStorage.getItem("activeUser")
     document.querySelector("#frnds-cont").addEventListener("click", () => {
+        console.log(event.target.id)
         // when the user clicks the add a friend button
         if (event.target.id === "save-friend-btn") {
             console.log("You clicked the add friend button")
@@ -21,7 +22,8 @@ const friendManager = () => {
                     if (friend.length === 1) {
                         console.log(friend)
                         const friendId = friend[0].id
-
+                        // If the user  exists in the database, it looks for already existing relationships
+                        // it has to look at both combinations of userId-otherFriendId and otherFriendId-userId
                         APIManager.getSingleFriendRelationship(activeUser, friendId)
                             .then((friendship) => {
                                 console.log("first friendship", friendship)
@@ -50,9 +52,21 @@ const friendManager = () => {
                         window.alert("that user does not exist in the database")
                     }
 
+
                 })
-    }
-})
+        }
+        //Event listener on the delete button
+        if (event.target.id.includes("del-frnds-btn")) {
+            console.log("you clicked the delete button")
+
+            const friendshipId = event.target.id.split("-")[3]
+            console.log(friendshipId)
+            APIManager.deleteSingleFriendRelationship(friendshipId)
+            buildFriends(activeUser)
+
+
+        }
+    })
 }
 
 export default friendManager

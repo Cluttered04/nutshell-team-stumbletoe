@@ -9,7 +9,7 @@ const buildFriends = (userId) => {
     APIManager.getAllFriendsByFriend(userId)
         .then(friends => {
             friends.forEach(friend => {
-                htmlString += `<h4>${friend.user.username}<h4><button type="submit" class = "btn" id ="del-frnds-btn-${friend.user.id}">delete</button>`
+                htmlString += `<h4>${friend.user.username}<h4><button type="submit" class = "btn" id ="del-frnds-btn-${friend.id}">delete</button>`
                 document.querySelector("#frnds-list").innerHTML = htmlString;
 
             })
@@ -19,10 +19,11 @@ const buildFriends = (userId) => {
                 .then(friends => {
                     friends.forEach(friend => {
                         const otherFriendId = friend.otherFriendId
+                        const friendshipId = friend.id
 
                         APIManager.getSingleFriendbyId(otherFriendId)
                             .then((singleFriend) => {
-                                htmlString += `<h4>${singleFriend.username}<h4><button type="submit" class = "btn" id ="del-frnds-btn-${singleFriend.id}">delete</button>`
+                                htmlString += `<h4>${singleFriend.username}<h4><button type="submit" class = "btn" id ="del-frnds-btn-${friendshipId}">delete</button>`
                                 // console.log(htmlString)
                                 document.querySelector("#frnds-list").innerHTML = htmlString;
                             })
