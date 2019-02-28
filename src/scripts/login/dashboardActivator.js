@@ -6,7 +6,6 @@ import formPrinter from "./printToDom.js"
 import newnewsActivator from "../testNews/newsActivator.js";
 import friendActivator from "../friends/friendActivator.js";
 import tasks from "../Tasks/tasksManager"
-import friendActivator from "../friends/friendActivator";
 import eventDashboard from "../Events/eventMain"
 
 

@@ -20,12 +20,7 @@
     "grunt-eslint": "^21.0.0",
     "grunt-http-server": "^2.1.0",
     "load-grunt-config": "^0.19.2",
-<<<<<<< HEAD
-    "nss-domcomponent": "^0.1.0",
-    "grunt-bg-shell": "^2.3.3"
-=======
     "nss-domcomponent": "^0.1.0"
->>>>>>> master
   },
   "dependencies": {
     "moment": "^2.24.0"
