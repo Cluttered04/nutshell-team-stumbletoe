@@ -3,7 +3,7 @@ import build from "./tasksContentBuilder"
 import print from "./tasksDOMPrinters"
 import listen from "./tasksListeners"
 
-const afterLogin = {
+const  manageContent = {
     buildCont: (userId) => {
         build.tasksList(userId); //build the task list
         print.button(userId); //print the new task button
@@ -18,7 +18,10 @@ const afterLogin = {
     eventTrigger: (userId) => {
         build.tasksList(userId); //build the task list
         print.button(userId); //prints save new and cancel button
+    },
+    clearContent: ()=>{
+        document.querySelector("#tasks-cont").innerHTML = ""
     }
 }
 
-export default afterLogin
+export default manageContent

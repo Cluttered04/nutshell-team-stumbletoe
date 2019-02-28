@@ -3,7 +3,7 @@ import print from "./tasksDOMPrinters"
 
 import api from "./tasksAPIManager"
 import object from "./tasksObjectsBuilders"
-import afterLogin from "./tasksLoadContent";
+import manageContent from "./tasksContentManager";
 
 
 
@@ -22,7 +22,7 @@ const listen = {
         const taskId = e.target.id.split("-")[2] //gets the task id that was place previously from the db
         api.checkbox(taskId, object.completeTaskObject()) //patch the object in the db, changing the value from false to true
           .then(() => {
-            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //reloads user's uncomplete tasks
+            manageContent.eventTrigger(sessionStorage.getItem("activeUser")) //reloads user's uncomplete tasks
           })
       }
     })
@@ -46,12 +46,12 @@ const listen = {
         api.new(object.taskObject(document.querySelector("#task-name-input").value, document.querySelector("#task-date-input").value)) //builds a json object from the input values and posts that to the API as a new entry
           .then(() => {
             document.querySelector("#tasks-box").innerHTML = ""; //clears the tasks container
-            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
+            manageContent.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
           })
       }
       if (e.target.classList.contains("cancel")) { //cancel button
         document.querySelector("#tasks-box").innerHTML = ""; //clears the tasks box
-        afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
+        manageContent.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
       }
     })
   },
@@ -61,7 +61,7 @@ const listen = {
       if (e.target.classList.contains("save-edit")) {
         api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends single updated task to the api
           .then(() => {
-            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks after update has been posted
+            manageContent.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks after update has been posted
 
           })
       }
@@ -75,7 +75,7 @@ const listen = {
       if (e.keyCode === 13) { //keycode 13 is the ENTER key
         api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends the edited task to the api
           .then(() => {
-            afterLogin.eventTrigger(sessionStorage.getItem("activeUser"))
+            manageContent.eventTrigger(sessionStorage.getItem("activeUser"))
             //load tasks after posting
           })
       }
