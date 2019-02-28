@@ -1,16 +1,17 @@
 // import createMessage from "./"
-// var moment = require('moment');
-// moment().format();
 // import scrollController from "./scrollController"
 import createMessage from "./createMessage"
+import apiManager from "./apiManager"
+import refresh from "./refresh"
 
+const username = apiManager.username()
 function printToDOM(activeUser) {
   let messageHTML = "";
   fetch(`http://localhost:8088/messages?_expand=user`)
     .then(messages => messages.json())
     .then(messages => {
       for (let i = 0; i < messages.length; i++) {
-        if (messages[i].userId === +activeUser) {
+        if (messages[i].userId === activeUser) {
           messageHTML += `<h4 class="name-chat-${messages[i].userId}">${messages[i].user.username}</h4><p class="msg-chat-${messages[i].id}">${
             messages[i].message
           }</p>`;
@@ -23,8 +24,7 @@ function printToDOM(activeUser) {
       document.getElementById("chat-cont").innerHTML = `${messageHTML}` + `<form>
       <input type="text" id="create-msg" placeholder="Type Something!">
   </form><button id="create-msg-btn">New Message</button>`
-    }).then(createMessage)
-
+    }).then(() => {createMessage(activeUser, username)})
 }
 
 export default printToDOM;
