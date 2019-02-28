@@ -1,5 +1,8 @@
 # Nutshell: The Information Dashboard
 
+To use this application, fork the repository and clone down to your local machine using the command
+
+
 You've been hired by a product company that builds productivity apps. For your first week on the job, you've been put on a team to build a new product called Nutshell. It's a one-stop dashboard for people to organize their daily tasks, events, news article, friends, and chat messages.
 
 You will be using all of the skills and concepts that you've learned up to this point in the course.
