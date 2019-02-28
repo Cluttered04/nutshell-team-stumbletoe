@@ -25,7 +25,7 @@ const formBuilder = {
         </div>`
     },
     newButton: () => {
-      return `<button id="new-news-btn">New Article</button>`
+      return `<h2>NEWS</h2> <button id="new-news-btn">New Article</button>`
     },
 }
 
