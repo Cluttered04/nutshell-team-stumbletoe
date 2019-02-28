@@ -1,5 +1,5 @@
 import printToDOM from "./printToDOM";
-import refresh from "./refresh"
+import refresh from "./refresh";
 
 function chat() {
   const activeUser = sessionStorage.getItem("activeUser");

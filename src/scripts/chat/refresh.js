@@ -10,7 +10,9 @@ const refresh = {
   },
 
   scrollToBottom: function scrollToBottom() {
-    document.querySelector("#chat-cont").scrollTop = document.querySelector("#chat-cont").scrollHeight;
+    document.querySelector("#chat-cont").scrollTop = document.querySelector(
+      "#chat-cont"
+    ).scrollHeight;
   }
 };
 
