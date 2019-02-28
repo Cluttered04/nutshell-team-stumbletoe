@@ -1,7 +1,7 @@
 //Michelle Tabor - This Module is the sub-main module that acts as the point of entry for the tasks module
 //imports
 import print from "./tasksDOMPrinters";
-import manageContent from "./tasksLoadContent"
+import manageContent from "./tasksContentManager"
 
 //tasks manager main function
 const tasks = {
