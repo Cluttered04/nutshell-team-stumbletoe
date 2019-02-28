@@ -3,7 +3,7 @@ import apiManager from "./apiManager";
 var moment = require("../../lib/node_modules/moment");
 import refresh from "./refresh";
 
-function createMessage(activeUser, username) {
+function createMessage(activeUser) {
   // const activeUser = sessionStorage.getItem("activeUser");
   document.getElementById("create-msg-btn").addEventListener("click", () => {
     const messageVal = document.querySelector("#create-msg").value;
