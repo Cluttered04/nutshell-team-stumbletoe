@@ -7,6 +7,12 @@ import buildFriends from "./friendBuilder";
 //  Built by Sydney Wait
 
 const friendManager = () => {
+
+    const clearInput = () => {
+        document.querySelector("#friend-input").value = ""
+
+
+    }
     const activeUser = sessionStorage.getItem("activeUser")
     document.querySelector("#frnds-cont").addEventListener("click", () => {
         console.log(event.target.id)
@@ -36,13 +42,15 @@ const friendManager = () => {
                                                 APIManager.addFriendRelationship(friendObject)
                                                     .then(() => {
                                                         buildFriends(activeUser)
-                                                    })
+                                                        clearInput()                                                    })
                                             } else {
                                                 window.alert("friendship already exists!")
+                                                clearInput()
                                             }
                                         })
                                 } else {
                                     window.alert("friendship already exists")
+                                    clearInput()
 
                                 }
                             })
@@ -50,6 +58,8 @@ const friendManager = () => {
 
                     else {
                         window.alert("that user does not exist in the database")
+                        clearInput()
+
                     }
 
 
@@ -62,7 +72,9 @@ const friendManager = () => {
             const friendshipId = event.target.id.split("-")[3]
             console.log(friendshipId)
             APIManager.deleteSingleFriendRelationship(friendshipId)
-            .then(buildFriends(activeUser))
+                .then(() => {
+                    buildFriends(activeUser)
+                })
 
 
 
