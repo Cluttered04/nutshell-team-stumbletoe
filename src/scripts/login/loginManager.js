@@ -5,6 +5,7 @@ import formPrinter from "./printToDom.js";
 import buildUserObject from "./objectBuilder.js";
 import APIManager from "./APIManager.js";
 import dashboardActivator from "./dashboardActivator.js";
+// import scrollController from "../chat/scrollController"
 
 const loginManager = () => {
   //EVENT LISTENER ON THE LOGIN CONTAINER TO HANDLE ALL OF LOGIN AND REGISTRATION FEATURES
@@ -26,6 +27,7 @@ const loginManager = () => {
 
             //this activates the dashboard
             dashboardActivator();
+            // scrollController.scrollData();
           } else {
             window.alert("The password is incorrect!");
           }

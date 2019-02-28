@@ -2,7 +2,6 @@
 // import scrollController from "./scrollController"
 import createMessage from "./createMessage"
 import apiManager from "./apiManager"
-import refresh from "./refresh"
 
 const username = apiManager.username()
 function printToDOM(activeUser) {
@@ -24,7 +23,8 @@ function printToDOM(activeUser) {
       document.getElementById("chat-cont").innerHTML = `${messageHTML}` + `<form>
       <input type="text" id="create-msg" placeholder="Type Something!">
   </form><button id="create-msg-btn">New Message</button>`
-    }).then(() => {createMessage(activeUser, username)})
+    }).then(() => {createMessage(activeUser, username)
+    })
 }
 
 export default printToDOM;

@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport content=width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
+    <title>Nutshell</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport content=width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
-  <title>Nutshell</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header id = "header"></header>
-  <div id = "login-cont"></div>
-  <div id="body">
-  <div class="row">
-    <div id="header"></div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div id="frnds-cont"></div>
+  <body>
+    <header id="header"></header>
+    <div id="login-cont"></div>
+    <div id="body">
+      <div class="row">
+        <div id="header"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="frnds-cont"></div>
+        </div>
+        <div class="col">
+          <div id="news-cont"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="chat-cont" style="overflow-y:scroll;"></div>
+        </div>
+        <div class="col">
+          <div id="tasks-cont"></div>
+          <div id="events-cont"></div>
+        </div>
+      </div>
     </div>
-    <div class="col">
-      <div id="news-cont"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="scroll">
-        <div id="chat-cont" style="overflow-y:scroll;"></div>
-      </div></div>
-    <div class="col">
-      <div id="tasks-cont"></div>
-      <div id="events-cont"></div>
-    </div>
-  </div>
-  </div>
-  </div>
-  <script src="bundle.js">
-  </script>
-</body>
-
+    <script src="bundle.js"></script>
+  </body>
 </html>

@@ -2,6 +2,7 @@
 //news, events, tasks, chats, and friends
 import formPrinter from "./printToDom.js";
 import chat from "../chat/chat";
+// import scrollController from "../chat/scrollController"
 
 const dashboardActivator = () => {
   formPrinter.printLogoutForm();
