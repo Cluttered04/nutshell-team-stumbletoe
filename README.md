@@ -1,6 +1,32 @@
 # Nutshell: The Information Dashboard
 
-To use this application, fork the repository and clone down to your local machine using the command
+To use this application, fork the repository and clone down to your local machine.  Navigate to the directory that you want to store the project and type the command:
+
+```js
+git clone <repository name>
+```
+cd into the directory and type:
+```js
+setUpBrowserify
+```
+cd into the directory src/lib and type:
+```js
+npm install
+```
+Once that has finished installing, you will also need to add an additional package called "moment.js" by typing
+```js
+npm install moment
+```
+
+This will create all the files needed to handle the database and browser events
+
+Now you can type:
+```js
+grunt
+```
+
+You will need to populate the API folder with a db.json file wusing the following template:
+
 
 
 You've been hired by a product company that builds productivity apps. For your first week on the job, you've been put on a team to build a new product called Nutshell. It's a one-stop dashboard for people to organize their daily tasks, events, news article, friends, and chat messages.
