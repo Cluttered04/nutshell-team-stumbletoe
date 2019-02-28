@@ -62,7 +62,8 @@ const friendManager = () => {
             const friendshipId = event.target.id.split("-")[3]
             console.log(friendshipId)
             APIManager.deleteSingleFriendRelationship(friendshipId)
-            buildFriends(activeUser)
+            .then(buildFriends(activeUser))
+
 
 
         }
