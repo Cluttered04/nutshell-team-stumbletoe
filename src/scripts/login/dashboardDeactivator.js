@@ -3,13 +3,16 @@
 
 import friendActivator from "../friends/friendActivator";
 import eventDeactivator from "../Events/EventDeactivator";
+import manageContent from "../Tasks/tasksContentManager";
 
 const dashboardDeactivator = () => {
 
     document.querySelector("#frnds-list").innerHTML = ""
     document.querySelector("#frnds-input").innerHTML = ""
     // insert your functions or HTML strings that need to be cleared on logout
-    eventDeactivator();
+    eventDeactivator(); //clears events container
+
+    manageContent.clearContent(); //clears the tasks container
 
 }
 
