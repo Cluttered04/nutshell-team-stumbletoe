@@ -25,7 +25,9 @@ Now you can type:
 grunt
 ```
 
-You will need to populate the API folder with a db.json file wusing the following template:
+You will need to populate the API folder with a sample db.json file using the following template:
+[here](./API/boilerplatedb.txt)
+
 
 
 
