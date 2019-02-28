@@ -8,7 +8,7 @@ import form from "./tasksFormsBuilder";
 const print = {
   //print button for new task
   button: userId => {
-    document.querySelector("#tasks-foot").innerHTML = `<button type="button" class="new" id="tasks-new-btn-${userId}">New Task</button>`
+    document.querySelector("#tasks-foot").innerHTML = `<button type="button" class="add-btn" id="tasks-new-btn-${userId}">New Task</button>`
   },
   //print new task form
   newTaskForm: () => {

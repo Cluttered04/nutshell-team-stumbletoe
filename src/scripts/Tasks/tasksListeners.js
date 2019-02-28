@@ -10,7 +10,7 @@ import afterLogin from "./tasksLoadContent";
 const listen = {
   activateNewTask: () => { //Listener for the New Task Button
     document.querySelector("#tasks-foot").addEventListener("click", e => {
-      if (e.target.classList.contains("new")) { //if the new button is clicked
+      if (e.target.classList.contains("add-btn")) { //if the new button is clicked
         print.newTaskForm(); //print the new task form
         print.saveButton(sessionStorage.getItem("activeUser")) //loads save-new and cancel buttons
       }
@@ -45,7 +45,8 @@ const listen = {
       if (e.target.classList.contains("save-new")) { //save button
         api.new(object.taskObject(document.querySelector("#task-name-input").value, document.querySelector("#task-date-input").value)) //builds a json object from the input values and posts that to the API as a new entry
           .then(() => {
-            afterLogin.buildCont(sessionStorage.getItem("activeUser")) //load tasks
+            document.querySelector("#tasks-box").innerHTML = ""; //clears the tasks container
+            afterLogin.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks
           })
       }
       if (e.target.classList.contains("cancel")) { //cancel button
