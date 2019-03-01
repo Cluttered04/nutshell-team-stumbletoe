@@ -7,7 +7,7 @@ moment().format("MMM DD YYYY");
 //build single task
 const buildSingleTask = (task) => {
     let dueDate = moment(`${task.dueDate}`).format("MMM DD YYYY"); //moment formatting of dates
-    return `<input type="checkbox" class="check" id="task-check-${task.id}"><span class="taskN" id="task-name-${task.id}"><strong>${dueDate}</strong> - ${task.task}</span></input><br />`
+    return `<input type="checkbox" class="check" id="task-check-${task.id}"><span class="taskN" id="task-name-${task.id}">${dueDate} - ${task.task}</span></input><br />`
 }
 
 export default buildSingleTask
