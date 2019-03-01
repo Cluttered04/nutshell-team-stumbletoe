@@ -92,32 +92,6 @@ const loginManager = () => {
 
                 })
 
-            //     .then(() => { })
-            // APIManager.getSingleUser("username", userName)
-            //     .then((singleUser) => {
-            //         //if username not in database, proceed
-            //         if (singleUser.length === 0) {
-            //             isUnique = true;
-
-
-            //             const password = document.querySelector("#reg-pass").value
-            //             const userObject = buildUserObject(userName, password, email)
-
-            //             APIManager.addUser(userObject)
-            //                 .then(() => {
-            //                     APIManager.getSingleUser("username", userName)
-            //                         .then((singleUser) => {
-            //                             sessionStorage.setItem("activeUser", singleUser[0].id)
-            //                             formPrinter.removeRegisterForm()
-            //                             dashboardActivator()
-            //                         })
-            //                 })
-            //         }
-            //         else {
-            //             //username is already in database, do not proceed
-            //             window.alert("that username already exists")
-            //         }
-            //     })
         }
     })
     // EVENT LISTENER FOR THE LOGOUT OPERATION
@@ -131,9 +105,6 @@ const loginManager = () => {
             formPrinter.printLoginForm()
         }
     })
-
-
-
 }
 
 export default loginManager;
