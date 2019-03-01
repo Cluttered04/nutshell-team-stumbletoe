@@ -1,6 +1,7 @@
 //Michelle Tabor - This module hosts a function that calls the other functions to build out the content of the task container
 import build from "./tasksContentBuilder"
 import print from "./tasksDOMPrinters"
+import listen from "./tasksListeners"
 
 
 const  manageContent = {
