@@ -1,339 +1,101 @@
 {
   "users": [
     {
-      "id": 1,
       "username": "Steve",
       "password": "password",
-      "email": "me@me.com"
-    },
-    {
-      "username": "sydney",
-      "password": "wait",
-      "email": "sydneyroo@yahoo.com",
-      "id": 2
+      "email": "me@me.com",
+      "id": 1
     },
     {
       "username": "jordan",
-      "password": "castelloe",
-      "email": "jordan@castelloe.com",
-      "id": 3
-    },
-    {
-      "username": "george",
-      "password": "wait",
-      "email": "george@gmail.com",
-      "id": 4
-    },
-    {
-      "username": "thomas",
-      "password": "wait",
-      "email": "Thomas@gmail.com",
-      "id": 5
-    },
-    {
-      "username": "tom",
-      "password": "tom",
-      "email": "tom@gmail.com",
-      "id": 6
+      "password": "password",
+      "email": "jordan@mail.com",
+      "id": 2
     }
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 1,
-      "message": "what's up?"
+      "userId": "1",
+      "message": "what's up?",
+      "id": 1
     }
   ],
   "news": [
     {
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-      "title": "Wormholes Allow Information to Escape Black Holes",
-      "synopsis": "Check out this recent discovery about workholes"
-    }
-  ],
-  "friends": [
-    {
-      "id": 1,
-      "userId": 1,
-      "otherFriendId": 2
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "otherFriendId": 3
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "otherFriendId": 5
-    },
-    {
-      "id": 4,
-      "userId": 3,
-      "otherFriendId": 1
-    },
-    {
-      "id": 5,
-      "userId": 4,
-      "otherFriendId": 1
-    }
-  ],
-  "tasks": [
-    {
-      "userId": 2,
-      "task": "Singing Around Fires",
-      "dueDate": "2019-02-18",
-      "complete": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "task": "Pillaging",
-      "dueDate": "2019-02-19",
-      "complete": false,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "task": "Drinking and More Drinking",
-      "dueDate": "2019-02-26",
-      "complete": false,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "task": "Sailing",
-      "dueDate": "2019-02-25",
-      "complete": false,
-      "id": 12
-    },
-    {
-      "userId": "1",
-      "task": "Sailing and Rowing",
-      "dueDate": "2019-02-25",
-      "complete": false,
-      "id": 13
-    },
-    {
-      "userId": "1",
-      "task": "A Task",
-      "dueDate": "2019-02-26",
-      "complete": true,
-      "id": 14
-    },
-    {
-      "userId": "1",
-      "task": "A Task",
-      "dueDate": "2019-02-26",
-      "complete": true,
-      "id": 15
-    },
-    {
-      "userId": "1",
-      "task": "Stabbing Practice",
-      "dueDate": "2019-06-04",
-      "complete": false,
-      "id": 16
-    },
-    {
-      "userId": "1",
-      "task": "Stabbing",
-      "dueDate": "2019-06-04",
-      "complete": false,
-      "id": 17
-    },
-    {
-      "userId": "1",
-      "task": "Scooter Racing",
-      "dueDate": "2019-06-04",
-      "complete": false,
-      "id": 18
-    },
-    {
-      "userId": "1",
-      "task": "Stabbing",
-      "dueDate": "2019-06-04",
-      "complete": true,
-      "id": 19
-    },
-    {
-      "userId": "1",
-      "task": "Stabbing Enemies",
-      "dueDate": "2019-06-04",
-      "complete": false,
-      "id": 20
-    },
-    {
-      "userId": "1",
-      "task": "Skipping",
-      "dueDate": "2019-02-25",
-      "complete": false,
-      "id": 21
-    },
-    {
-      "userId": "1",
-      "task": "Looting Villagers",
-      "dueDate": "2019-02-25",
-      "complete": false,
-      "id": 22
-    },
-    {
-      "userId": "1",
-      "task": "Looting Villagers",
-      "dueDate": "2019-02-25",
-      "complete": true,
-      "id": 23
-    },
-    {
-      "userId": "1",
-      "task": "Peg-Leg Races",
-      "dueDate": "2019-03-09",
-      "complete": false,
-      "id": 24
-    },
-    {
-      "userId": "1",
-      "task": "Parrot Insult Showdown",
-      "dueDate": "2019-03-30",
-      "complete": false,
-      "id": 25
-    },
-    {
-      "userId": "1",
-      "task": "Parrot Insult Showdown",
-      "dueDate": "2019-03-31",
-      "complete": true,
-      "id": 26
-    },
-    {
-      "userId": "1",
-      "task": "Parrot Insult Showdown",
-      "dueDate": "2019-03-30",
-      "complete": true,
-      "id": 27
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": false,
-      "id": 28
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": true,
-      "id": 29
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": true,
-      "id": 30
-    },
-    {
-      "userId": "1",
-      "task": "Caroling",
-      "dueDate": "2019-02-19",
-      "complete": false,
-      "id": 31
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": true,
-      "id": 32
-    },
-    {
-      "userId": "1",
-      "task": "Signing like Angels",
-      "dueDate": "2019-02-19",
-      "complete": false,
-      "id": 33
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": true,
-      "id": 34
-    },
-    {
-      "userId": "1",
-      "task": "Signing Obnoxiously",
-      "dueDate": "2019-02-19",
-      "complete": false,
-      "id": 35
-    },
-    {
-      "userId": "1",
-      "task": "Signing Loudly",
-      "dueDate": "2019-02-19",
-      "complete": true,
-      "id": 36
-    },
-    {
-      "userId": "1",
-      "task": "Another",
-      "dueDate": "2019-02-04",
-      "complete": false,
-      "id": 37
-    },
-    {
-      "userId": "1",
-      "task": "Yet again",
-      "dueDate": "2019-02-11",
-      "complete": false,
-      "id": 38
-    },
-    {
-      "userId": "1",
-      "task": "Yetti Hunting",
-      "dueDate": "2019-02-11",
-      "complete": true,
-      "id": 39
-    },
-    {
-      "userId": "1",
-      "task": "Yet again",
-      "dueDate": "2019-02-11",
-      "complete": true,
-      "id": 40
-    },
-    {
-      "userId": "1",
-      "task": "Knitting Class",
-      "dueDate": "2019-02-12",
-      "complete": false,
-      "id": 41
-    }
-  ],
-  "events": [
-    {
-      "name": "Workshop on how to build Apps",
-      "date": "2019-02-25",
-      "location": "NewForce",
+      "title": "Facebook filed a patent for a ‘civil’ political debate forum",
+      "url": "https://www.theverge.com/2019/2/28/18244632/facebook-political-debate-system-digital-forum-reputation-patent-filing",
+      "synopsis": "What could go wrong?",
+      "date": "2019-02-28T20:13:45.901Z",
       "userId": "1",
       "id": 1
     },
     {
-      "name": "Dance Dance Academyy",
-      "date": "2019-02-26",
-      "location": "Bisbane, AU",
-      "userId": 1,
-      "id": 9
+      "title": "The Trauma Floor",
+      "url": "https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona",
+      "synopsis": "The secret lives of Facebook moderators in America",
+      "date": "2019-02-28T20:13:45.901Z",
+      "userId": "1",
+      "id": 2
+    }
+  ],
+  "friends": [
+    {
+      "userId": "2",
+      "otherFriendId": "1",
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "userId": "2",
+      "task": "Singing Around Fires",
+      "dueDate": "2019-02-18",
+      "complete": false,
+      "id": 1
     },
     {
-      "name": "Test Event",
-      "date": "2019-03-01",
-      "location": "Test-Location",
       "userId": "1",
-      "id": 10
+      "task": "Pillaging",
+      "dueDate": "2019-02-19",
+      "complete": true,
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "task": "Drinking and More Drinking",
+      "dueDate": "2019-02-26",
+      "complete": true,
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "task": "sleep",
+      "dueDate": "2019-02-05",
+      "complete": true,
+      "id": 4
+    }
+  ],
+  "events": [
+    {
+      "name": "Leprechaun 5K",
+      "date": "2019-03-01",
+      "location": "Ritter Park",
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "name": "Potluck",
+      "date": "2019-02-13",
+      "location": "Chase Bank Building",
+      "userId": "2",
+      "id": 2
+    },
+    {
+      "name": "Ballroom Dance Party",
+      "date": "2019-02-13",
+      "location": "Vino's Bar and Grill",
+      "userId": "2",
+      "id": 3
     }
   ]
 }

@@ -59,7 +59,7 @@ const listen = {
     document.querySelector("#tasks-foot").addEventListener("click", e => {
       const taskId = e.target.id.split("-")[3] //gets the task id from the button id
       if (e.target.classList.contains("save-edit")) {
-        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends single updated task to the api
+        api.edit(taskId, object.taskObject(document.querySelector(`#task-edit-name-input-${taskId}`).value, document.querySelector(`#task-edit-date-input-${taskId}`).value)) //sends single updated task to the api
           .then(() => {
             manageContent.eventTrigger(sessionStorage.getItem("activeUser")) //load tasks after update has been posted
 
@@ -71,9 +71,9 @@ const listen = {
     document.querySelector("#tasks-box").addEventListener('keypress', e => {
       const nodeName = document.getElementsByName("task") //grabbing the task id from dom component
       const tId = nodeName[0].attributes[2].nodeValue//had to dig deep for it
-      const taskId = tId.split("-")[3]//finally splitting the id from the nodeList
+      const taskId = tId.split("-")[4]//finally splitting the id from the nodeList
       if (e.keyCode === 13) { //keycode 13 is the ENTER key
-        api.edit(taskId, object.taskObject(document.querySelector(`#task-name-input-${taskId}`).value, document.querySelector(`#task-date-input-${taskId}`).value)) //sends the edited task to the api
+        api.edit(taskId, object.taskObject(document.querySelector(`#task-edit-name-input-${taskId}`).value, document.querySelector(`#task-edit-date-input-${taskId}`).value)) //sends the edited task to the api
           .then(() => {
             manageContent.eventTrigger(sessionStorage.getItem("activeUser"))
             //load tasks after posting
