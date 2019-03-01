@@ -10,8 +10,8 @@ const forms = {
     editTaskForm: (taskObject) => {
         console.log(taskObject)
         return `<h3>Edit Task</h3>
-<input type="textarea" name="task" id="task-name-input-${taskObject.id}" placeholder="Task" value="${taskObject.task}"></input>
-<input type="date" name="dueDate" id="task-date-input-${taskObject.id}" value="${taskObject.dueDate}"></input>`
+<input type="textarea" name="task" id="task-edit-name-input-${taskObject.id}" placeholder="Task" value="${taskObject.task}"></input>
+<input type="date" name="dueDate" id="task-edit-date-input-${taskObject.id}" value="${taskObject.dueDate}"></input>`
     },
     saveButton: (userId) => { //save button html
         return `<button type="button" class="save-new" id="save-tasks-btn-${userId}">Save</button>`
