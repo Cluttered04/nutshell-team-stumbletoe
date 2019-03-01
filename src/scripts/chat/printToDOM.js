@@ -14,22 +14,22 @@ function printToDOM(activeUser) {
         if (messages[i].userId === activeUser) {
           messageHTML += `<h4 class="name-chat-${messages[i].userId}">${
             messages[i].user.username
-          }</h4><p class="msg-chat-${messages[i].id}">${
+          }</h4><p class="msg-chat-${messages[i].id}"><i class="fas fa-caret-square-right" id="edit-msg-btn"></i>${
             messages[i].message
           }</p>`;
           document.getElementById("chat-cont").innerHTML = `${messageHTML}`;
         } else {
           messageHTML += `<h4 class="name-chat-${messages[i].userId}">${
             messages[i].user.username
-          }</h4><p class="msg-chat-otherUser">${messages[i].message}</p>`;
+          }</h4><p class="msg-chat-0">${messages[i].message}</p>`;
           document.getElementById("chat-cont").innerHTML = `${messageHTML}`;
         }
       }
       document.getElementById("chat-cont").innerHTML =
         `${messageHTML}` +
-        `<form>
+        `<div>
       <input type="text" id="create-msg" placeholder="Type Something!">
-  </form><button id="create-msg-btn">New Message</button>`;
+  </div><button id="create-msg-btn">New Message</button>`;
     })
     .then(() => {
       createMessage(activeUser, username);
