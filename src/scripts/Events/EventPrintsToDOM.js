@@ -23,8 +23,6 @@ const printsEventsToDOM = {
         .then(parsedEvents => {
             parsedEvents.forEach(event => {
             eventDisplayArray.push(event);
-            console.log(eventDisplayArray);
-
         })
 
     }).then(() => {

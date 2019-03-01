@@ -15,14 +15,12 @@ const loginManager = () => {
         const eventTarget = event.target.id.split("-")
 
         if (event.target.id === "login-btn") {
-            console.log("You clicked the login button!")
             const userName = document.querySelector("#login-name").value
             const password = document.querySelector("#login-pass").value
             //check if username is in the database
             APIManager.getSingleUser("username", userName)
                 .then((singleUser) => {
                     if (singleUser.length === 1) {
-                        console.log("The username of", userName, "was verified")
                         //check if password matches
                         if (singleUser[0].password === password) {
                             formPrinter.removeLoginForm()

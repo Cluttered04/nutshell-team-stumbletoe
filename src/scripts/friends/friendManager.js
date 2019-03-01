@@ -15,7 +15,6 @@ const friendManager = () => {
     }
     const activeUser = sessionStorage.getItem("activeUser")
     document.querySelector("#frnds-cont").addEventListener("click", () => {
-        console.log(event.target.id)
         // when the user clicks the add a friend button
         if (event.target.id === "save-friend-btn") {
             // console.log("You clicked the add friend button")
@@ -27,7 +26,6 @@ const friendManager = () => {
             APIManager.getSingleFriendbyUserName(friendName)
                 .then((friend) => {
                     if (friend.length === 1) {
-                        console.log(friend)
                         const friendId = friend[0].id
                         const stringFriendId = String(friendId)
                         //Check to make sure that the user is not adding themself!

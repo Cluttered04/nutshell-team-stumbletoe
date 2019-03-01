@@ -7,24 +7,18 @@ import newnewsActivator from "../testNews/newsActivator.js";
 import friendActivator from "../friends/friendActivator.js";
 import tasks from "../Tasks/tasksManager"
 import eventDashboard from "../Events/eventMain"
-
+import chat from "../chat/chat"
 
 const dashboardActivator = () => {
     formPrinter.printLogoutForm()
     friendActivator()
-
-    //This is just a placeholder until we get all the other pieces
-    // document.querySelector("#body").innerHTML = `you are logged in`
+    chat()
     //this prints the tasks section after login - MT
     tasks.tasksActivator(sessionStorage.getItem("activeUser"));
-
     //This is just a placeholder until we get all the other pieces
     document.querySelector("#header").innerHTML += `you are logged in`
-
     //Adds event dashboard
     eventDashboard();
-    console.log("Activator is running!")
-
     newnewsActivator();
 }
 

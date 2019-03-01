@@ -8,7 +8,6 @@ const forms = {
     },
     //edit task form
     editTaskForm: (taskObject) => {
-        console.log(taskObject)
         return `<h3>Edit Task</h3>
 <input type="textarea" name="task" id="task-edit-name-input-${taskObject.id}" placeholder="Task" value="${taskObject.task}"></input>
 <input type="date" name="dueDate" id="task-edit-date-input-${taskObject.id}" value="${taskObject.dueDate}"></input>`
