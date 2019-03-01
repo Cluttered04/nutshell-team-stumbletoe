@@ -61,7 +61,7 @@ const buildFriends = (userId) => {
                         }
                         //If the user has no friends, print the following
                         else {
-                            htmlString = "add a friend to get started"
+                            htmlString = "<h2>FRIENDS</h2>add a friend to get started"
                             document.querySelector("#frnds-list").innerHTML = htmlString;
                         }
                     }

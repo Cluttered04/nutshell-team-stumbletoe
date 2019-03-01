@@ -6,11 +6,11 @@ import friendFormBuilder from "./friendFormBuilder";
 import friendManager from "./friendManager";
 
 const friendActivator = () => {
-const activeUser = sessionStorage.getItem("activeUser")
-
+    const activeUser = sessionStorage.getItem("activeUser")
+    friendManager()
     buildFriends(activeUser)
     friendFormBuilder();
-    friendManager();
+
 
 }
 

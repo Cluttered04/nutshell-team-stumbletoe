@@ -1,6 +1,5 @@
 import APIManager from "./friendAPIManager";
 import relationshipBuilder from "./friendRelationshipBuilder";
-import friendActivator from "./friendActivator";
 import buildFriends from "./friendBuilder";
 
 // This module is to manage the events that happen in the friends page
@@ -15,9 +14,10 @@ const friendManager = () => {
     }
     const activeUser = sessionStorage.getItem("activeUser")
     document.querySelector("#frnds-cont").addEventListener("click", () => {
+
         // when the user clicks the add a friend button
         if (event.target.id === "save-friend-btn") {
-            // console.log("You clicked the add friend button")
+
 
             // it collects the friend name and compares it to the usernames in the database
             const friendName = document.querySelector("#friend-input").value
