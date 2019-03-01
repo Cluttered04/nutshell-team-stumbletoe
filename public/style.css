@@ -22,29 +22,33 @@ body {
 
 
 .friends-style {
-    height: 50vh;
+    height: 49vh;
     overflow-y: scroll;
     width: 25vw;
-    background-color: #edcc3d;
+    background-color: #a38b61;
     border: 1px solid #b70a01;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .events-style {
     height: 40vh;
     overflow-y: scroll;
-    width: 40vw;
-    background-color: #edcc3d;
+    width: 43.75vw;
+    background-color: #a38b61;
     text-align: center;
     border: 1px solid #b70a01;
-
+    box-sizing: border-box;
 }
 
 .news-style {
-    height: 50vh;
+    height: 49vh;
     width: 75vw;
     overflow-y: scroll;
-    background-color: #edcc3d;
+    background-color: #a38b61;
     border: 1px solid #b70a01;
+    text-align: center;
+    box-sizing: border-box;
 
 }
 
@@ -52,16 +56,19 @@ body {
     height: 40vh;
     overflow-y: scroll;
     width: 30vw;
-    background-color: #edcc3d;
+    background-color: #a38b61;
     border: 1px solid #b70a01;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.chat-style {
-    height: 40vh;
-    overflow-y: scroll;
+.chat {
+    height: 39.5vh;
+    overflow-y: auto;
     width: 25vw;
-    background-color: #edcc3d;
+    background-color: #a38b61;
     border: 1px solid #b70a01;
+    text-align: center;
 }
 
 #hidden {
@@ -77,7 +84,10 @@ body {
     margin: 0 auto;
     text-align: center;
     border-radius: 50px;
-    background-color: #edcc3d;
+    background-color: #a38b61;
+    background-image: url(https://files.slack.com/files-pri/TDXR3HY84-FGNFGFSBG/image_from_ios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     box-shadow: 5px 5px #b75709;
@@ -96,6 +106,9 @@ h1 {
     font-weight: bold;
     font-size: 5em;
     color:#633007;
+    background-color: #a38b61;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .input {
@@ -106,7 +119,7 @@ h1 {
     margin: auto;
     text-align: center;
     border-radius: 50px;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -132,7 +145,10 @@ h1 {
 button {
     border-radius: 50px;
     font-size: 18px;
-
+    padding: 2px 8px;
+    background-color: #c65a1f;
+    margin-bottom: 10px;
+    /* color: #aa9772; */
 }
 
 ::-webkit-scrollbar {
@@ -150,9 +166,8 @@ button {
 h2 {
     text-align: center;
     font-family: 'Calligraffitti', cursive;
-    background-color: #e59627;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    background-color: #c65a1f;
+    padding-top: 5px;
     font-size: 2em;
     border: 1px solid #b70a01;
 }
@@ -160,23 +175,50 @@ h2 {
 #header {
     display: flex;
     justify-content: flex-end;
-    background-color:#e59627;
+    background-color:#a38b61;
     border: 1px solid #b70a01;
+    max-height: 2.5em;
 
 }
 
 input {
-    border-radius: 50px;
+    border-radius: 10px;
     text-align: center;
+    padding: 10px 10px;
 }
 
 
 #chat-cont {
-  height: 50vh;
-  /* border: 2px solid black; */
+  height: 30vh;
+
 }
+
 .earliest-event {
   font-weight: bold;
   font-size: 1.5em;
   background-color: tan;
+}
+
+#news-header {
+    position: sticky;
+}
+
+#save-friend-btn {
+    margin-top: 10px;
+}
+
+#logout-btn {
+    margin-top: 7px;
+    padding-bottom: 22px;
+}
+
+#nutshell-header {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#nutshell-header-logout {
+    font-family: 'Calligraffitti', cursive;
+    font-size: 1em;
 }

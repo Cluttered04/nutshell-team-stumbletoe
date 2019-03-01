@@ -13,7 +13,7 @@ moment().format("MMM DD YYYY")
 const printsEventsToDOM = {
 
      printEventHeader: function() {
-        document.querySelector("#events-header").innerHTML = `<h2>Events</h2><button id="<button class="btn" id="add-event-button" class="add-event-button">Add Event</button>`
+        document.querySelector("#events-header").innerHTML = `<h2>EVENTS</h2><button id="<button class="btn" id="add-event-button" class="add-event-button">Add Event</button>`
 },
     printEvents: function() {
         //Pushes the json objects into a new array for sorting

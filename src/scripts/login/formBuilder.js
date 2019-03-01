@@ -20,7 +20,7 @@ const formBuilder = {
     <button type="register" class = "btn" id="submit-reg-btn">register</button>`
     },
     makeLogoutForm: () => {
-        return `<button type="register" class = "btn" id="logout-btn">logout</button>`
+        return `<h3 id="nutshell-header">Nutshell</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="nutshell-header-logout">      You are logged in</p><button type="register" class = "btn" id="logout-btn">logout</button>`
     }
 }
 

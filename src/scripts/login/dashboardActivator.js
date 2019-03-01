@@ -16,7 +16,7 @@ const dashboardActivator = () => {
     //this prints the tasks section after login - MT
     tasks.tasksActivator(sessionStorage.getItem("activeUser"));
     //This is just a placeholder until we get all the other pieces
-    document.querySelector("#header").innerHTML += `you are logged in`
+
     //Adds event dashboard
     eventDashboard();
     newnewsActivator();
