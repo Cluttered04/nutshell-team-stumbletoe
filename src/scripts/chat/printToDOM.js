@@ -10,6 +10,7 @@ function printToDOM(activeUser) {
     .then(messages => messages.json())
     .then(messages => {
       for (let i = 0; i < messages.length; i++) {
+        document.getElementById("chat-header").innerHTML = `<h2>CHAT</h2>`
         if (messages[i].userId === activeUser) {
           messageHTML += `<h4 class="name-chat-${messages[i].userId}">${
             messages[i].user.username
