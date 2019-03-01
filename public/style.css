@@ -1,5 +1,173 @@
+body {
+    height: 90vh;
+    background-color: #f49542;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .earliest-event {
     font-weight: bold;
     font-size: 1.5em;
     background-color: tan;
 }
+
+.row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.column {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.friends-style {
+    height: 50vh;
+    overflow-y: scroll;
+    width: 25vw;
+    background-color: #edcc3d;
+    border: 1px solid #b70a01;
+}
+
+.events-style {
+    height: 40vh;
+    overflow-y: scroll;
+    width: 40vw;
+    background-color: #edcc3d;
+    text-align: center;
+    border: 1px solid #b70a01;
+
+}
+
+.news-style {
+    height: 50vh;
+    width: 75vw;
+    overflow-y: scroll;
+    background-color: #edcc3d;
+    border: 1px solid #b70a01;
+
+}
+
+.tasks-style {
+    height: 40vh;
+    overflow-y: scroll;
+    width: 30vw;
+    background-color: #edcc3d;
+    border: 1px solid #b70a01;
+}
+
+.chat-style {
+    height: 40vh;
+    overflow-y: scroll;
+    width: 25vw;
+    background-color: #edcc3d;
+    border: 1px solid #b70a01;
+}
+
+#hidden {
+    display: none;
+}
+
+#visible {
+
+}
+
+.login-style {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #edcc3d;
+
+
+    box-shadow: 5px 5px #b75709;
+    margin-bottom: 20px;
+
+}
+
+.login-buttons {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+}
+
+h1 {
+    font-family: 'Calligraffitti', cursive;
+    font-weight: bold;
+    font-size: 5em;
+    color:#633007;
+}
+
+.input {
+    display: flex;
+    width: 20vw;
+    height: 10vh;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.login-input {
+    width: 20vw;
+    height: 10vh;
+
+
+}
+
+.register-input {
+    display: flex;
+    width: 20vw;
+    height: 10vh;
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button {
+    border-radius: 50px;
+    font-size: 18px;
+
+}
+
+::-webkit-scrollbar {
+
+}
+
+::-webkit-scrollbar-track {
+    background: #e0794e;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #541c05;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Calligraffitti', cursive;
+    background-color: #e59627;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 2em;
+    border: 1px solid #b70a01;
+}
+
+#header {
+    display: flex;
+    justify-content: flex-end;
+    background-color:#e59627;
+    border: 1px solid #b70a01;
+
+}
+
+input {
+    border-radius: 50px;
+    text-align: center;
+}
+
+

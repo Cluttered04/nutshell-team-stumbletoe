@@ -26,6 +26,8 @@ const dashboardActivator = () => {
     console.log("Activator is running!")
 
     newnewsActivator();
+
+    document.querySelector("#hidden").id="visible";
 }
 
 export default dashboardActivator;

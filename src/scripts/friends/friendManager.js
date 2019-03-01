@@ -18,12 +18,12 @@ const friendManager = () => {
         console.log(event.target.id)
         // when the user clicks the add a friend button
         if (event.target.id === "save-friend-btn") {
-            // console.log("You clicked the add friend button")
+
 
             // it collects the friend name and compares it to the usernames in the database
             const friendName = document.querySelector("#friend-input").value
 
-            // console.log("friend name", friendName)
+
             APIManager.getSingleFriendbyUserName(friendName)
                 .then((friend) => {
                     if (friend.length === 1) {
@@ -82,7 +82,6 @@ const friendManager = () => {
             // console.log("you clicked the delete button")
 
             const friendshipId = event.target.id.split("-")[3]
-            // console.log(friendshipId)
             APIManager.deleteSingleFriendRelationship(friendshipId)
                 .then(() => {
                     buildFriends(activeUser)
