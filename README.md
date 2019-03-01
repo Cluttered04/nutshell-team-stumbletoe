@@ -36,34 +36,34 @@ password
 ```
 
 
-##Login
+## Login
 (insert screenshot of login)
 Upon login, you will see the main dashboard of the Nutshell app with 5 sections.
 (insert screenshot of the dashboard page)
 You should now click the logout button and practice adding users.
 
-##Register
+## Register
 (insert screenshot of Register)
-To register a new user, click the register button and a form will appear that requests the email address, username, and password for a new user.  If the username already exists in the database, a window alert will pop up with an error message.  Otherwise, the new user will be created and added to the database and you will automatically log in.
+To register a new user, click the register button and a form will appear that requests the email address, username, and password for a new user.  If the email or username already exists in the database, a window alert will pop up with an error message.  Otherwise, the new user will be created and added to the database and you will automatically be logged in.
 
-##Friends
+## Friends
 If you log in as Steve, you will notice that he already has one friend relationship with the user "jordan".  If you would like to add another friend, you can type a username in the box to add them by username.  You can only add friends from usernames that already exist in the app, and those you don't already have an established relationship with.
 
 (insert screenshot of the friends section)
 <!-- syntax for loading images -->
 <!-- ![Alt text](images/searchfield.jpg?raw=true "dashboard") -->
 
-##Chat
+## Chat
+Users can see the forum chat messages
 
-##News
+## News
+Users can add a new article to their news section, or edit an existing article
 
-##Tasks
+## Tasks
+Users can add new tasks or check off existing tasks.  When a task is checked off, it disappears from the task list.  If a user wishes to edit a task, they can click on the name of the task and an edit form will appear.  They can click 'save' or hit 'enter' to save the task.
 
-
-##Events
-
-# Nutshell: The Information Dashboard
-
+## Events
+Users can add events, or edit or delete them.  The events are ordered with the most current event up top, and it has a slightly different styling and background.  To edit an event, click on the 'edit' buttonn
 
 
 ## Module Map:
