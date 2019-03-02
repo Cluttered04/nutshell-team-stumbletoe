@@ -20,6 +20,15 @@ const apiManager = {
       },
       body: JSON.stringify(messageObj)
     });
+  },
+  saveEditedMessage: (newMessageObj, messageId) => {
+    return fetch(`http://localhost:8088/messages/${messageId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newMessageObj)
+    });
   }
 };
 

@@ -1,5 +1,6 @@
 // import createMessage from "./"
 // import scrollController from "./scrollController"
+import editMessage from "./editMessage"
 import createMessage from "./createMessage";
 import apiManager from "./apiManager";
 
@@ -14,7 +15,7 @@ function printToDOM(activeUser) {
         if (messages[i].userId === activeUser) {
           messageHTML += `<h4 class="name-chat-${messages[i].userId}">${
             messages[i].user.username
-          }</h4><p class="msg-chat-${messages[i].id}"><i class="fas fa-caret-square-right" id="edit-msg-btn"></i>${
+          }</h4><p class="msg-chat-${messages[i].id}"><button id="edit-msg-btn-${messages[i].id}">Edit</button>${
             messages[i].message
           }</p>`;
           document.getElementById("chat-cont").innerHTML = `${messageHTML}`;
@@ -25,8 +26,8 @@ function printToDOM(activeUser) {
           document.getElementById("chat-cont").innerHTML = `${messageHTML}`;
         }
       }
-      document.getElementById("chat-cont").innerHTML =
-        `${messageHTML}` +
+      document.getElementById("chat-cont").innerHTML = `${messageHTML}`
+      document.getElementById("chat-input").innerHTML =
         `<div>
       <input type="text" id="create-msg" placeholder="Type Something!">
   </div><button id="create-msg-btn">New Message</button>`;
