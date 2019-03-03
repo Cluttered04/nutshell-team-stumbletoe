@@ -1,21 +1,18 @@
-import apiManager from "./apiManager";
 import printToDOM from "./printToDOM";
+import editMessageApi from "./editMessageAPI";
 
 const editMessage = () => {
-  const activeUserId = sessionStorage.getItem("activeUser");
   document.querySelector("#chat-cont").addEventListener("click", e => {
     console.log(e);
     if (e.target.id.includes("edit-msg-btn")) {
       const messageId = e.target.id.split("-")[3];
-      const editedMessageVal = document.querySelector("#create-msg").value;
-      const editedMessageValAPI = {
-        message: `${editedMessageVal}`,
-      };
-      apiManager.saveEditedMessage(editedMessageValAPI, messageId);
+      document.querySelector("#chat-input").innerHTML = `<div>
+      <input type="text" id="create-msg">
+  </div><button id="save-edit">Save Edit</button>`;
+      editMessageApi(messageId);
     } else {
       console.log("Error: Not able to edit.");
     }
-    printToDOM(activeUserId);
   });
 };
 
