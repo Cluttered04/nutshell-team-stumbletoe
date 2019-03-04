@@ -1,7 +1,7 @@
 import printToDOM from "./printToDOM";
 import apiManager from "./apiManager";
-var moment = require("../../lib/node_modules/moment");
 import refresh from "./refresh";
+var moment = require("../../lib/node_modules/moment");
 
 function createMessage(activeUser) {
   // const activeUser = sessionStorage.getItem("activeUser");
