@@ -77,7 +77,7 @@ Users can add events, or edit or delete them.  The events are ordered with the m
 
 ## Logout
 The user has the ability to logout at any time by clicking on the logout button at the top of the page.
-![Error: Image not found!](README_Images/events.jpg)
+![Error: Image not found!](README_Images/logout.jpg)
 
 ## Module Map:
 
