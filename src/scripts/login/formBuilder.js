@@ -6,8 +6,8 @@ const formBuilder = {
         return `<h1>Welcome to Nutshell!</h1>
     <input class="input login-input" type="text" name="userName" id="login-name" placeholder="Username"><br>
     <input class="input login-input" type="password" name="password" id="login-pass" placeholder="Password"><br>
-    <button type="submit" class = "btn" id="login-btn">login</button>
-    <button type="submit" class = "btn" id="reg-btn">register</button>`
+    <div class="login-buttons"><button type="submit" class = "btn" id="login-btn">login</button>
+    <button type="submit" class = "btn" id="reg-btn">register</button></div>`
     },
 
 
@@ -20,7 +20,7 @@ const formBuilder = {
     <button type="register" class = "btn" id="submit-reg-btn">register</button>`
     },
     makeLogoutForm: () => {
-        return `<button type="register" class = "btn" id="logout-btn">logout</button>`
+        return `<h3 id="nutshell-header">Nutshell</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="nutshell-header-logout">      You are logged in</p><button type="register" class = "btn" id="logout-btn">logout</button>`
     }
 }
 

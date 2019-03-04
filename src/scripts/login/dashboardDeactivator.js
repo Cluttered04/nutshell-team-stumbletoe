@@ -18,6 +18,7 @@ const dashboardDeactivator = () => {
     eventDeactivator(); //clears events container
 
     manageContent.clearContent(); //clears the tasks container
+    document.querySelector("#visible").id="hidden";
 
 }
 
