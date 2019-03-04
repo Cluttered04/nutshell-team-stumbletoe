@@ -5,7 +5,7 @@ import APIManager from "./friendAPIManager"
 
 
 const buildFriends = (userId) => {
-    let htmlString = "<h2>Friends:</h2>"
+    let htmlString = "<h2>FRIENDS</h2>"
     // Get all the friends when the user is in the otherFriendId place
     APIManager.getAllFriendsByFriend(userId)
         .then((friends) => {
@@ -61,7 +61,7 @@ const buildFriends = (userId) => {
                         }
                         //If the user has no friends, print the following
                         else {
-                            htmlString = "add a friend to get started"
+                            htmlString = "<h2>FRIENDS</h2>add a friend to get started"
                             document.querySelector("#frnds-list").innerHTML = htmlString;
                         }
                     }

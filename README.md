@@ -21,7 +21,7 @@ npm install moment
 ```
 
 You will need to populate the API folder with a sample db.json file using the following template:
-<!-- [here](./api/boilerplatedb.txt) -->
+[here](./api/boilerplatedb.txt)
 
 This will create all the files needed to handle the database and browser events
 
