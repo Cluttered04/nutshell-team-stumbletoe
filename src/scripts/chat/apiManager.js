@@ -1,3 +1,5 @@
+import printToDOM from "./printToDOM"
+
 const apiManager = {
   getUsername: () => {
     const activeUserId = sessionStorage.getItem("activeUser");
@@ -19,6 +21,18 @@ const apiManager = {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(messageObj)
+    });
+  },
+  saveEditedMessage: (newMessageObj, messageId) => {
+    return fetch(`http://localhost:8088/messages/${messageId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newMessageObj)
+    }).then(() => {
+      const activeUserId = sessionStorage.getItem("activeUser");
+      printToDOM(activeUserId);
     });
   }
 };
