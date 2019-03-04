@@ -41,42 +41,57 @@ const loginManager = () => {
 
         //If user clicks the register button, load the registration form
         if (event.target.id === "reg-btn") {
-            console.log("you clicked the register button")
+
             formPrinter.printRegisterForm()
 
 
         }
         //if user clicks the submit button, registration will be posted to database
         if (event.target.id === "submit-reg-btn") {
-            console.log("you clicked the submit button")
+
             //first check if username is already in the database.
             const userName = document.querySelector("#reg-name").value
-            APIManager.getSingleUser("username", userName)
+            const email = document.querySelector("#reg-email").value
+            const password = document.querySelector("#reg-pass").value
+            let isUnique = false;
+
+            APIManager.getSingleUser("email", email)
+                //check to see is the email address already exists in the database
                 .then((singleUser) => {
-                    //username not in database, proceed
                     if (singleUser.length === 0) {
-                        console.log("The username of", userName, "was verified")
+                        isUnique = true;
 
-                        const password = document.querySelector("#reg-pass").value
-                        const email = document.querySelector("#reg-email").value
+                        APIManager.getSingleUser("username", userName)
+                            .then((singleUser) => {
+                                //check to see if the username already exists in the database
+                                if (singleUser.length === 0) {
+                                    isUnique = true;
 
-                        const userObject = buildUserObject(userName, password, email)
-                        console.log("this is the userObject", userObject)
-                        APIManager.addUser(userObject)
-                            .then(() => {
-                                APIManager.getSingleUser("username", userName)
-                                    .then((singleUser) => {
-                                        sessionStorage.setItem("activeUser", singleUser[0].id)
-                                        formPrinter.removeRegisterForm()
-                                        dashboardActivator()
-                                    })
+                                    const userObject = buildUserObject(userName, password, email)
+
+                                    APIManager.addUser(userObject)
+                                        .then(() => {
+                                            APIManager.getSingleUser("username", userName)
+                                                .then((singleUser) => {
+                                                    sessionStorage.setItem("activeUser", singleUser[0].id)
+                                                    formPrinter.removeRegisterForm()
+                                                    dashboardActivator()
+                                                })
+                                        })
+                                }
+                                else {
+                                    isUnique = false;
+                                    window.alert("the username is already in the database")
+                                }
                             })
                     }
                     else {
-                        //username is already in database, do not proceed
-                        window.alert("that username already exists")
+                        isUnique = false;
+                        window.alert("the email is already in the database")
                     }
+
                 })
+
         }
     })
     // EVENT LISTENER FOR THE LOGOUT OPERATION
@@ -90,9 +105,6 @@ const loginManager = () => {
             formPrinter.printLoginForm()
         }
     })
-
-
-
 }
 
 export default loginManager;
